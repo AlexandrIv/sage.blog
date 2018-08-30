@@ -1,0 +1,16 @@
+body {
+	background: lightgray;
+} 
+
+.body-gray {
+	background: #343a40;
+	opacity: 0.8;
+	z-index: 100;
+	transition: all 0.8s;
+	.header-menu {
+		z-index: 9999;
+	}
+	#mbtn {
+		z-index: 9999;
+	}
+}
