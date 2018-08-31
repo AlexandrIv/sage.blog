@@ -1,12 +1,13 @@
 body {
 	background: lightgray;
+	transition: all 0.5s ease-in;
 } 
 
 .body-gray {
-	background: #343a40;
+	background-color: rgba(0, 0, 0, 0.5);
 	opacity: 0.8;
 	z-index: 100;
-	transition: all 0.8s;
+	transition: all 0.5s ease-in;
 	.header-menu {
 		z-index: 9999;
 	}
