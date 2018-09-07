@@ -4,4 +4,5 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="<?= App\asset_path('images/logo.png'); ?>" />
   <?php wp_head() ?>
+  <script> window.slide_time = {"slideinterval":<?php echo e(App::slideshow_time()); ?>}</script>
 </head>

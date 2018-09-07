@@ -2,7 +2,9 @@
 
 @section('content')
   @include('partials.page-header')
-  @include('partials.header-slider')
+  {{-- @include('partials.header-slider') --}}
+ {{--  @include('partials.education')
+  @include('partials.features') --}}
   @if (!have_posts())
     <div class="alert alert-warning">
       {{ __('Sorry, no results were found.', 'sage') }}

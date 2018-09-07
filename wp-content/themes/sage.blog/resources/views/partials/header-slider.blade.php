@@ -1,50 +1,29 @@
 <div id="block-for-slider">
-	<div id="viewport">
-		<ul id="slidewrapper">
-			<li class="slide" style="background-image: url('');">
-				<div class="opacity-block"></div>
-				<div class="text-slide">
-					<h2>@php echo get_field('title_slide', 'option'); @endphp</h2>
-					<p>@php	echo get_field('description_slide', 'option');	@endphp</p>
-					<a style="background-color: @php echo get_field('button_color', 'option'); @endphp;" href="#">@php echo get_field('button_text', 'option'); @endphp</a>
-				</div>
-			</li>
-			<li class="slide" style="background-image: url('https://hsto.org/files/ef1/3d7/97e/ef13d797e4c642c7a1d4b2b91f7ad7b3.jpg');">
-				<div class="opacity-block"></div>
-				<div class="text-slide">
-					<h2>Knowledge is power</h2>
-					<p>Any succesfull career starts with good education</p>
-					<a href="#">Learn more</a>
-				</div>
-			</li>
-			<li class="slide" style="background-image: url('https://hsto.org/files/ec5/592/f1e/ec5592f1e814401eb38305682a8e88d4.jpg');">
-				<div class="opacity-block"></div>
-				<div class="text-slide">
-					<h2>Knowledge is power</h2>
-					<p>Any succesfull career starts with good education</p>
-					<a href="#">Learn more</a>
-				</div>
-			</li>
-			<li class="slide" style="background-image: url('https://hsto.org/files/eda/61a/3c5/eda61a3c53db408d820643998d9acd81.jpg');">
-				<div class="opacity-block"></div>
-				<div class="text-slide">
-					<h2>Knowledge is power</h2>
-					<p>Any succesfull career starts with good education</p>
-					<a href="#">Learn more</a>
-				</div>
-			</li>
-			{{-- <li class="slide"><img src="https://hsto.org/files/ef1/3d7/97e/ef13d797e4c642c7a1d4b2b91f7ad7b3.jpg" alt="2" class="slide-img"></li>
-			<li class="slide"><img src="https://hsto.org/files/ec5/592/f1e/ec5592f1e814401eb38305682a8e88d4.jpg" alt="3" class="slide-img"></li>
-			<li class="slide"><img src="https://hsto.org/files/eda/61a/3c5/eda61a3c53db408d820643998d9acd81.jpg" alt="4" class="slide-img"></li> --}}
-		</ul>
-		<ul id="nav-btns">
-			<li class="slide-nav-btn"></li>
-			<li class="slide-nav-btn"></li>
-			<li class="slide-nav-btn"></li>
-			<li class="slide-nav-btn"></li>
-		</ul>
+	<div class="sliders">
+		<div id="viewport">
+			<ul id="slidewrapper">
+				{{-- @php $slideopacity = get_field('slideopacity', 'option'); @endphp --}}
+				@php $slidetime = get_field('slideshow_time', 'option'); @endphp				
+				
+				@if($slideshow)
+					@foreach ($slideshow as $src)
+					<li class="slides">
+						<div class="slide" style="background-image: url('@php echo $src['imageslide']@endphp')"></div>
+						<div class="opacity-block" style="opacity: {{ App::slideshow_opacity() }}"></div>
+						<div class="text-slide">
+							<h2>{!! $src['slidesetting']['slidetitle'] !!}</h2>
+							<p>{!! $src['slidesetting']['slidedescription'] !!}</p>
+							<a style="background-color: {!! $src['slidesetting']['buttoncolor'] !!}" href="{!! $src['slidesetting']['buttonlink'] !!}">{!! $src['slidesetting']['buttontext'] !!}</a>
+						</div>
+					</li>
+					@endforeach
+				@endif
+			</ul>
+			<ul id="nav-btns">
+				<li class="slide-nav-btn"></li>
+				<li class="slide-nav-btn"></li>
+				<li class="slide-nav-btn"></li>
+				<li class="slide-nav-btn"></li>
+			</ul>
+		</div>
 	</div>
-</div>
-@php
-	var_dump( get_field('title_slide', 'option');
-@endphp

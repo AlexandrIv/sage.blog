@@ -2,6 +2,8 @@
 
 namespace App;
 
+include 'inc/Features.php';
+
 /**
  * Theme customizer
  */
