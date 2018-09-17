@@ -83,13 +83,13 @@ array_map(
     array_fill(0, 4, 'dirname')
 );
 Container::getInstance()
-    ->bindIf('config', function () {
-        return new Config([
-            'assets' => require dirname(__DIR__).'/config/assets.php',
-            'theme' => require dirname(__DIR__).'/config/theme.php',
-            'view' => require dirname(__DIR__).'/config/view.php',
-        ]);
-    }, true);
+->bindIf('config', function () {
+    return new Config([
+        'assets' => require dirname(__DIR__).'/config/assets.php',
+        'theme' => require dirname(__DIR__).'/config/theme.php',
+        'view' => require dirname(__DIR__).'/config/view.php',
+    ]);
+}, true);
 
 
 
@@ -102,32 +102,83 @@ Container::getInstance()
 
 
 if( function_exists('acf_add_options_page') ) {
-    
-   acf_add_options_page(array(
-        'page_title'    => 'Theme General Settings',
-        'menu_title'    => 'Theme Settings',
-        'menu_slug'     => 'theme-general-settings',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
 
-   acf_add_options_page(array(
-        'page_title'    => 'Theme General Settings',
-        'menu_title'    => 'Theme Settings',
-        'menu_slug'     => 'theme-general-settings',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
+ acf_add_options_page(array(
+    'page_title'    => 'Theme General Settings',
+    'menu_title'    => 'Theme Settings',
+    'menu_slug'     => 'theme-general-settings',
+    'capability'    => 'edit_posts',
+    'redirect'      => false
+));
 
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Header Settings',
-        'menu_title'    => 'Header',
-        'parent_slug'   => 'theme-general-settings',
-    ));
-    
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Footer Settings',
-        'menu_title'    => 'Footer',
-        'parent_slug'   => 'theme-general-settings',
-    ));
+ acf_add_options_page(array(
+    'page_title'    => 'Theme General Settings',
+    'menu_title'    => 'Theme Settings',
+    'menu_slug'     => 'theme-general-settings',
+    'capability'    => 'edit_posts',
+    'redirect'      => false
+));
+
+ acf_add_options_sub_page(array(
+    'page_title'    => 'Theme Header Settings',
+    'menu_title'    => 'Header',
+    'parent_slug'   => 'theme-general-settings',
+));
+
+ acf_add_options_sub_page(array(
+    'page_title'    => 'Theme Footer Settings',
+    'menu_title'    => 'Footer',
+    'parent_slug'   => 'theme-general-settings',
+));
 }
+
+
+
+
+
+function true_load_posts(){
+
+
+    $arr = array();
+    $value = get_field('choosing_a_course', 'option');
+    foreach ($value as $myajax) {
+        array_push($arr, $myajax->ID);
+    }
+
+
+
+    $posts = get_posts( array(
+        'post_type' => 'Courses',
+        'post_per_page' => -1,
+        'post__not_in' => $arr,
+    ) );
+
+    foreach ($posts as $ajaxpost) {
+        ?>
+            <div class="col-md-4">
+                <div class="courses-desc-box">
+                    <div class="top-box">
+                        <?php echo get_the_post_thumbnail( $ajaxpost->ID ); ?>
+                        <h3><?php echo $ajaxpost->post_title ?></h3>
+                        <p><?php echo $ajaxpost->short_text ?></p>
+                    </div>
+                    <div class="bottom-box">
+                        <ul>
+                            <li>Time : <?php echo $ajaxpost->time ?></li>
+                            <li><?php echo $ajaxpost->teacher ?></li>
+                        </ul>
+                        <a href="#">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        <?php
+    }
+
+    wp_die();
+
+
+
+}
+
+add_action('wp_ajax_loadmore', 'true_load_posts');
+add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');

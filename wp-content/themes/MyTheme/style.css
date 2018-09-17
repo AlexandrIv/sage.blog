@@ -1,0 +1,32 @@
+/*
+Theme Name: MyTheme
+*/
+
+.load{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+#true_loadmore{
+	display: inline-block;
+	background-color: #ddd; /* сервый фон */
+	border-radius: 2px; /* закругление углов */
+	font-size: 14px; font-size: 0.875rem; /* размер шрифта */
+	font-weight: 800; /* начертание */
+	letter-spacing: 1px; /* межбуквенный интервал */
+	cursor: pointer; /* курсор мыши при наведении такой же, как при наведении на ссылку */
+	text-transform: uppercase;
+	padding: 10px 15px; /* внутренние отступы сверху и снизу у кнопки */
+	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out; /* CSS-анимация*/
+}
+#true_loadmore:hover{
+	background-color: #767676;
+	color: #fff;
+}
+
+.box-post h3{
+	text-align: center;
+}

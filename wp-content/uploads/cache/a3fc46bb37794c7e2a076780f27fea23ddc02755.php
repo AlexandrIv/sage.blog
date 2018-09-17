@@ -5,6 +5,7 @@
 	<?php echo $__env->make('partials.features', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 	<?php echo $__env->make('partials.courses', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 	<?php echo $__env->make('partials.teachers', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<?php echo $__env->make('partials.programs', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 <?php echo get_the_posts_navigation(); ?>
 

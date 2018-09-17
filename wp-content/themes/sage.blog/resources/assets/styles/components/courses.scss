@@ -1,108 +1,182 @@
-.courses-block {
+.courses {
 	width: 100%;
 	height: auto;
-	margin-top: 80px;
-	margin-bottom: 60px;
-	@media only screen and (max-width: 992px) {
-		.courses-box {
-			margin-bottom: 30px;
-		}
-
-		.view-all{
-			display: none;
-		}
-	}
+	background-color: #fff;
 	h2 {
 		text-align: center;
-		margin-bottom: 63px;
 		color: #1a1a1a;
 		font-family: "Nunito Sans";
 		font-size: 48px;
 		font-weight: 700;
 		line-height: 60px;
+		padding-top: 80px;
+		padding-bottom: 60px;
 	}
 }
 
-.courses-box {
+.bg {
 	background-color: #f1f1f1;
-	.top-box {
-		border-bottom: 2px solid rgba(71, 71, 72, 0.2);
-		img {
-			margin-bottom: 36px;
-			width: 100%;
-			display: inline-block;
-		}
-		h3 {
-			margin-left: 30px;
-			margin-bottom: 17px;
-			color: #1a1a1a;
-			font-family: "Nunito Sans";
-			font-size: 30px;
-			font-weight: 700;
-			line-height: 36px;
-		}
-		p {
-			margin-left: 30px;
-			margin-bottom: 26px;
-			color: #484848;
-			font-family: Montserrat;
-			font-size: 18px;
-			font-weight: 400;
-			line-height: 24px;
-		}
-	}
-	.botton-box {
-		display: inline-block;
+}
+
+.top-box {
+	border-bottom: 2px solid rgba(71, 71, 72, 0.2);
+	img {
+		margin-bottom: 36px;
 		width: 100%;
 		height: auto;
-		text-align: center;
-		ul {
-			display: inline-block;
-			margin-top: 10px;
-			padding: 0;
-			text-align: center;
-			li {
-				margin: 0 45px;
-				padding-top: 20px;
-				padding-bottom: 16px;
-				list-style-type: none;
-				color: #1a1a1a;
-				font-family: "Nunito Sans";
-				font-size: 24px;
-				font-weight: 700;
-				border-bottom: 2px solid rgba(71, 71, 72, 0.2);
-			}
-		}
-		a {
-			height: auto;
-			display: inline-block;
-			margin-top: 50px;
-			margin-bottom: 25px;
-			padding: 8px 75px;
-			border-radius: 25px;
-			background-color: #27ae60;
-			color: #ffffff;
+	}
+	h3 {
+		color: #1a1a1a;
+		font-family: "Nunito Sans";
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 36px;
+		margin-bottom: 17px;
+		margin-left: 30px;
+	}
+	p {
+		color: #484848;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 24px;
+		margin-left: 30px;
+		margin-bottom: 26px;
+	}
+}
+
+.bottom-box {
+	text-align: center;
+	ul {
+		margin: 0 45px;
+		padding: 0;
+		list-style-type: none;
+		margin-bottom: 72px;
+		li {
+			color: #1a1a1a;
 			font-family: "Nunito Sans";
 			font-size: 24px;
 			font-weight: 700;
-			text-decoration: none;	
+			border-bottom: 2px solid rgba(71, 71, 72, 0.2);
+			padding-top: 20px;
+			padding-bottom: 16px;
+			width: 100%;
+		}
+	}
+	a {
+		border-radius: 25px;
+		background-color: #27ae60;
+		padding: 16px 86px;
+		color: #ffffff;
+		font-family: "Nunito Sans";
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 25px;
+		display: inline-block;
+		&:hover {
+			text-decoration: none;
 		}
 	}
 }
 
-.view-all{
-	display: inline-block;
-	text-align: center;
-	margin: 0 auto;
-	opacity: 0.5;
-	color: #1a1a1a;
-	font-family: "Nunito Sans";
-	font-size: 24px;
-	font-weight: 700;
-	margin-top: 40px;
+@media only screen and (max-width: 992px) {
+	.desctop-block {
+		display: none;
+	}
+
+	.courses-slides {
+		width: 100%;
+	}
+
+	.courses-viewport {
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		text-align: center;
+	}
+
+	.courses-slidewrapper {
+		position: relative;
+		-webkit-transition: 1s;
+		-o-transition: 1s;
+		transition: 1s;
+		-webkit-transition-timing-function: cubic-bezier(0.67, 0.01, 0.23, 1);
+		-o-transition-timing-function: cubic-bezier(0.67, 0.01, 0.23, 1);
+		transition-timing-function: cubic-bezier(0.67, 0.01, 0.23, 1);
+		margin: 0;
+		padding: 0;
+	}
+
+	.courses-slide {
+		list-style: none;
+		display: inline;
+		float: left;
+		background-color: #f1f1f1;
+	}
+
+	.courses-nav-btns {
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		height: auto;
+		padding: 0;
+		margin: 0;
+		margin-top: 22px;
+		margin-bottom: 10px;
+	}
+
+	.courses-nav-btn {
+		position: relative;
+		display: inline-block;
+		list-style: none;
+		width: 14px;
+		height: 14px;
+		border: 2px solid #1a1a1a;
+		border-radius: 50%;
+		margin: 4px;
+		&:hover {
+			cursor: pointer;
+			background-color: #27ae60;
+			border-color: #27ae60; 
+		}
+		.active {
+			background-color: #27ae60;
+			border-color: #27ae60;
+		}
+	}
 }
 
-.view-all:hover{
-	text-decoration: none;
-	color: #1a1a1a;
+@media only screen and (min-width : 992px) {
+	.tablet-block {
+		display: none;
+	}
+
+	.courses-desc-box {
+		background-color: #f1f1f1;
+		margin-bottom: 25px;
+	}
+
+	.all {
+		margin: 0 auto;
+		opacity: 0.5;
+		color: #1a1a1a;
+		font-family: "Nunito Sans";
+		font-size: 24px;
+		font-weight: 700;
+		cursor: pointer;
+		margin-bottom: 70px;
+	}
+
+	.all:hover {
+		cursor: pointer;
+		color: #1a1a1a;
+		text-decoration: none; 
+	}
 }
+
+

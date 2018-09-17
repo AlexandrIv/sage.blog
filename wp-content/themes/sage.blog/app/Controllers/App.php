@@ -92,12 +92,15 @@ class App extends Controller
     public static function features_title(){
         return get_field('features_title', 'option');
     }
-
     public static function posts_to_display(){
         return get_field('posts_to_display', 'option');
     }
 
 
+
+    public static function postcourses(){
+        return get_field('choosing_a_course', 'option');
+    }
    
     
 }

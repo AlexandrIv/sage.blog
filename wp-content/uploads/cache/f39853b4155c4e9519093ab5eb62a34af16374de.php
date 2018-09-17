@@ -19,11 +19,6 @@
 					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 				<?php endif; ?>
 			</ul>
-			<ul id="nav-btns">
-				<li class="slide-nav-btn"></li>
-				<li class="slide-nav-btn"></li>
-				<li class="slide-nav-btn"></li>
-				<li class="slide-nav-btn"></li>
-			</ul>
+			<ul id="nav-btns"></ul>
 		</div>
 	</div>

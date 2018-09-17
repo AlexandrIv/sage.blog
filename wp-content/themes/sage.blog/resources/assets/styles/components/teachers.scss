@@ -1,14 +1,166 @@
-.teacher-section {
+.teacher {
 	width: 100%;
 	height: auto;
 	background-color: #f1f1f1;
-	h2{
-		margin-top: 80px;
-		text-align: center;
+	h2 {
 		color: #1a1a1a;
 		font-family: "Nunito Sans";
 		font-size: 48px;
 		font-weight: 700;
 		line-height: 60px;
+		text-align: center;
+		padding-top: 80px;
+		padding-bottom: 60px;
 	}
+	@media only screen and (max-width: 992px) {
+		h2 {
+			color: #1a1a1a;
+			font-family: "Nunito Sans";
+			font-size: 36px;
+			font-weight: 700;
+			padding-top: 40px;
+			padding-bottom: 20px;
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.teachers-desctop {
+		display: none;
+	}
+
+	.teacher-box {
+		text-align: center;
+		display: flex!important;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.slick-slide {
+		opacity: 0.4;
+		padding: 0 85px;
+	}
+
+	.slick-active {
+		opacity: 1;
+	}
+
+	.teacher-name {
+		width: auto;
+		height: auto;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.teacher-name {
+		h3 {
+			color: #1a1a1a;
+			font-family: "Nunito Sans";
+			font-size: 24px;
+			font-weight: 700;
+		}
+		h4 {
+			color: #27ae60;
+			font-family: "Nunito Sans";
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.teachers-tablet {
+		display: none;
+	}
+
+	.teacher-box {
+		height: 100%;
+		width: 100%;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+		margin-bottom: 60px;
+		img {
+			width: 96px;
+			height: 96px;
+			-webkit-flex-wrap: wrap;
+			-moz-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			-o-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+	}
+
+	.teacher-name {
+		width: auto;
+		height: auto;
+		margin-left: 18px;
+		text-align: left;
+	}
+
+	.teacher-box {
+		h3 {
+			color: #1a1a1a;
+			font-family: "Nunito Sans";
+			font-size: 30px;
+			font-weight: 700;
+			margin: 0;
+			padding: 0;
+		}
+		h4 {
+			color: #27ae60;
+			font-family: Montserrat;
+			font-size: 24px;
+			font-weight: 400;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+
+
+
+.slick-dots li {
+	height: 10px!important;
+	width: 10px!important;
+}
+
+.slick-active {
+	button {
+		background-color: #1a1a1a!important;
+		opacity: 1!important;
+	}
+}
+
+.slick-dots li button {
+	height: 10px!important;
+	width: 10px!important;
+	border: 2px solid #1a1a1a!important;
+	border-radius: 50%;
+	opacity: 0.7;
+}
+
+.slick-dots li button:before {
+	display: none;
+}
+
+.slick-dots {
+	position: relative!important;
+	display: inline-block!important;
+	width: 100%!important;
+	height: auto!important;
+	text-align: center!important;
+	margin-bottom: 20px!important;
+}
+
+
+.teachers-tablet {
+	height: 100%;
 }

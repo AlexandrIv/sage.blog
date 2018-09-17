@@ -7,6 +7,7 @@
 	@include('partials.features')
 	@include('partials.courses')
 	@include('partials.teachers')
+	@include('partials.programs')
 
 {!! get_the_posts_navigation() !!}
 @endsection

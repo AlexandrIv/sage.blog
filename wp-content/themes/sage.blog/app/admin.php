@@ -3,6 +3,8 @@
 namespace App;
 
 include 'inc/Features.php';
+include 'inc/Courses.php';
+include 'inc/Teachers.php';
 
 /**
  * Theme customizer

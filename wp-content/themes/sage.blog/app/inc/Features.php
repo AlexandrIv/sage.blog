@@ -1,6 +1,6 @@
 <?php 
 // Register Custom Post Type
-function custom_post_type() {
+function Features() {
 
 	$labels = array(
 		'name'                  => _x( 'Features Posts', 'Post Type General Name', 'text_domain' ),
@@ -53,6 +53,6 @@ function custom_post_type() {
 	register_post_type( 'Features', $args );
 
 }
-add_action( 'init', 'custom_post_type', 0 );
+add_action( 'init', 'Features', 0 );
 
 ?>

@@ -29,7 +29,6 @@ let webpackConfig = {
     children: false,
     errors: false,
     errorDetails: false,
-    warnings: false,
     chunks: false,
     modules: false,
     reasons: false,
@@ -171,12 +170,12 @@ let webpackConfig = {
         context: config.paths.assets,
       },
     }),
-    new webpack.LoaderOptionsPlugin({
-      test: /\.js$/,
-      options: {
-        eslint: { failOnWarning: false, failOnError: true },
-      },
-    }),
+    // new webpack.LoaderOptionsPlugin({
+    //   test: /\.js$/,
+    //   options: {
+    //     eslint: { failOnWarning: false, failOnError: false },
+    //   },
+    // }),
     // new StyleLintPlugin({
     //   failOnError: !config.enabled.watcher,
     //   syntax: 'scss',
