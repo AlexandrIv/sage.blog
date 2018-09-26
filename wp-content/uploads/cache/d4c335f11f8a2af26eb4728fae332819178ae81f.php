@@ -41,6 +41,21 @@
         <div class="comment-block">
           <?php comments_template('/partials/comments.blade.php') ?>
         </div>
+
+        
+       <div class="prev-next-button">
+          <div class="prev-btn">
+            <?php echo e($next = previous_post_link('<i class="fas fa-angle-left"></i> %link')); ?>
+
+          </div>
+          <div class="next-btn">
+            <?php echo e($next = next_post_link('%link <i class="fas fa-angle-right"></i>')); ?>
+
+          </div>
+        </div>
+
+
+
       </div>
     </div>
     <div class="col-md-3">

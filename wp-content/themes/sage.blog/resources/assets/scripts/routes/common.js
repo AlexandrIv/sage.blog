@@ -10,7 +10,7 @@ export default {
 				})
 			});
 		});
-	
+
 	},
 
 	finalize() {
@@ -207,8 +207,20 @@ export default {
 
 
 
+		$(document).ready(function(){
+			$("#respond").on("click","a", function (event) {
+				event.preventDefault();
+				var id  = $(this).attr('href'),
+				top = $(id).offset().top;
+				$('body,html').animate({scrollTop: top-200}, 2000);
+				document.getElementById("comment").focus();
+				$("<div id='third'>Третий</div>").appendTo("#reply-title");
+			});
+		});
 
-},
+
+
+	},
 };
 
 

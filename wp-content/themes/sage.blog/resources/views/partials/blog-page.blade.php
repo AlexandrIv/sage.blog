@@ -1,13 +1,23 @@
 <div class="blog-page-slideshow">
-	<div class="blog-slide" style="background-image: url('@asset('images/img1.jpg')');">
-		<div class="blog-slide-bg"></div>
-		<div class="blog-slide-text">
-			<h3>Visual speak louder</h3>
-			<p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what is on your mind.</p>
-			<a href="#">Read more</a>
-		</div>
-	</div>
-	<div class="blog-slide" style="background-image: url('@asset('images/img2.jpg')');">
+			@php
+				$args = array(
+					'post_type' => 'post',
+					'numberposts'	=> 3,
+				);
+				$posts = get_posts($args)
+			@endphp
+			@foreach($posts as $post)
+				<div class="blog-slide" style="background-image: url('{!! get_the_post_thumbnail_url($post->ID) !!}');">
+					<div class="blog-slide-bg"></div>
+					<div class="blog-slide-text">
+						<h3>{!! $post->post_title !!}</h3>
+						<p>{!! wp_trim_words($post->post_content, 10) !!}</p>
+						<a href="#">Read more</a>
+					</div>
+				</div>
+			@endforeach
+		
+	{{-- <div class="blog-slide" style="background-image: url('@asset('images/img2.jpg')');">
 		<div class="blog-slide-bg"></div>
 		<div class="blog-slide-text">
 			<h3>Visual speak louder</h3>
@@ -30,8 +40,12 @@
 			<p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what is on your mind.</p>
 			<a href="#">Read more</a>
 		</div>
-	</div>
+	</div> --}}
+
 </div>
+			
+
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-9">

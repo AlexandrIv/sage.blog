@@ -50,6 +50,19 @@
         <div class="comment-block">
           @php comments_template('/partials/comments.blade.php') @endphp
         </div>
+
+        
+       <div class="prev-next-button">
+          <div class="prev-btn">
+            {{ $next = previous_post_link('<i class="fas fa-angle-left"></i> %link') }}
+          </div>
+          <div class="next-btn">
+            {{ $next = next_post_link('%link <i class="fas fa-angle-right"></i>') }}
+          </div>
+        </div>
+
+
+
       </div>
     </div>
     <div class="col-md-3">
@@ -72,4 +85,4 @@
    @endphp
 </div>
 
- --}}
+--}}

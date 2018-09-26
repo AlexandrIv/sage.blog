@@ -253,21 +253,6 @@ show_admin_bar(false);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function mytheme_comment( $comment, $args, $depth ) {
     if ( 'div' === $args['style'] ) {
         $tag       = 'div';
@@ -325,33 +310,16 @@ function mytheme_comment( $comment, $args, $depth ) {
         <div class="comment-text">
             <?php comment_text(); ?>
         </div>
-
+        
         <div class="reply">
-        <?php 
-            $post_id = get_the_ID();
-            $comment_id =get_comment_ID();
+            <?php 
+                comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'])))
+             ?>
 
-            //get the setting configured in the admin panel under settings discussions "Enable threaded (nested) comments  levels deep"  
-            $max_depth = get_option('thread_comments_depth');
-            //add max_depth to the array and give it the value from above and set the depth to 1
-            $default = array(
-                'add_below'  => 'comment',
-                'respond_id' => 'respond',
-                'reply_text' => __('Reply'),
-                'login_text' => __('Log in to Reply'),
-                'depth'      => 1,
-                'before'     => '',
-                'after'      => '',
-                'max_depth'  => $max_depth
-                );
-            comment_reply_link($default,$comment_id,$post_id);
-          ?>
-          <pre>
-              <?php var_dump($comment_id); ?>
-          </pre>
         </div>
     </div>
     <?php if ( 'div' != $args['style'] ) { ?>
     </div>
 <?php }
 }
+

@@ -40,10 +40,7 @@ if (post_password_required()) {
 
     </div>
   <?php endif; ?>
-  <?php
-    $args = array(
-      'label_submit' => 'Submit',
-    );
-  ?>
-  <?php comment_form($args) ?>
+  
+  <?php comment_form() ?>
+  
 </section>

@@ -1,37 +1,28 @@
 <div class="blog-page-slideshow">
-	<div class="blog-slide" style="background-image: url('<?= App\asset_path('images/img1.jpg'); ?>');">
-		<div class="blog-slide-bg"></div>
-		<div class="blog-slide-text">
-			<h3>Visual speak louder</h3>
-			<p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what is on your mind.</p>
-			<a href="#">Read more</a>
-		</div>
-	</div>
-	<div class="blog-slide" style="background-image: url('<?= App\asset_path('images/img2.jpg'); ?>');">
-		<div class="blog-slide-bg"></div>
-		<div class="blog-slide-text">
-			<h3>Visual speak louder</h3>
-			<p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what is on your mind.</p>
-			<a href="#">Read more</a>
-		</div>
-	</div>
-	<div class="blog-slide" style="background-image: url('<?= App\asset_path('images/img3.jpg'); ?>');">
-		<div class="blog-slide-bg"></div>
-		<div class="blog-slide-text">
-			<h3>Visual speak louder</h3>
-			<p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what is on your mind.</p>
-			<a href="#">Read more</a>
-		</div>
-	</div>
-	<div class="blog-slide" style="background-image: url('<?= App\asset_path('images/img4.jpg'); ?>');">
-		<div class="blog-slide-bg"></div>
-		<div class="blog-slide-text">
-			<h3>Visual speak louder</h3>
-			<p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what is on your mind.</p>
-			<a href="#">Read more</a>
-		</div>
-	</div>
+			<?php
+				$args = array(
+					'post_type' => 'post',
+					'numberposts'	=> 3,
+				);
+				$posts = get_posts($args)
+			?>
+			<?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+				<div class="blog-slide" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID); ?>');">
+					<div class="blog-slide-bg"></div>
+					<div class="blog-slide-text">
+						<h3><?php echo $post->post_title; ?></h3>
+						<p><?php echo wp_trim_words($post->post_content, 10); ?></p>
+						<a href="#">Read more</a>
+					</div>
+				</div>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+		
+	
+
 </div>
+			
+
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-9">
