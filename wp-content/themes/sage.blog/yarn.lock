@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@fortawesome/fontawesome-free@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.3.1.tgz#5466b8f31c1f493a96754c1426c25796d0633dd9"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -2132,9 +2136,9 @@ dom-serializer@0:
     domelementtype "~1.1.1"
     entities "~1.1.1"
 
-dom7@^2.0.7:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.1.1.tgz#3de0f44a1a822a524d4090ba25148b070e53738c"
+dom7@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.1.2.tgz#a914070c0abe8465384997a9c4f34475f67f75bd"
   dependencies:
     ssr-window "^1.0.1"
 
@@ -4261,6 +4265,10 @@ jpegtran-bin@^3.0.0:
 jquery-slideshow@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/jquery-slideshow/-/jquery-slideshow-1.0.5.tgz#c8e9e61242aee0b1fee020c8777c744a8024d3b4"
+
+jquery-touchswipe@^1.6.18:
+  version "1.6.19"
+  resolved "https://registry.yarnpkg.com/jquery-touchswipe/-/jquery-touchswipe-1.6.19.tgz#dfd5ddaec0b78212dd500d29707129b9c7fd6cd4"
 
 jquery@>=1.8.3, jquery@^3.3.1:
   version "3.3.1"
@@ -7684,11 +7692,11 @@ svgo@^1.0.0, svgo@^1.0.5:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-swiper@^4.3.5:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.3.5.tgz#40369d4870e66cd10eb9862329af63b8a582aca1"
+swiper@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.4.1.tgz#9eeca17c5bfa4a27663963b2640119e5fc668255"
   dependencies:
-    dom7 "^2.0.7"
+    dom7 "^2.1.2"
     ssr-window "^1.0.1"
 
 "symbol-tree@>= 3.1.0 < 4.0.0":

@@ -35,7 +35,7 @@ function Teachers() {
 		'label'                 => __( 'Teachers', 'text_domain' ),
 		'description'           => __( 'Adds education posts', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( '' ),
+		'supports'              => array( 'title', 'thumbnail' ),
 		'taxonomies'            => array( 'features.posts' ),
 		'hierarchical'          => false,
 		'public'                => true,

@@ -5,6 +5,7 @@ namespace App;
 include 'inc/Features.php';
 include 'inc/Courses.php';
 include 'inc/Teachers.php';
+include 'inc/ProgramsTaxonomy.php';
 
 /**
  * Theme customizer

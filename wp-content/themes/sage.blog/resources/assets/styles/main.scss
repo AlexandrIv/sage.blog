@@ -25,7 +25,17 @@
 @import "components/courses";
 @import "components/teachers";
 @import "components/programs";
+@import "components/client";
+@import "components/blog";
+@import "components/letter";
+@import "components/contact";
+@import "components/footer";
+@import "components/blog-page";
 @import "layouts/header";
+@import "layouts/contact-page";
+@import "layouts/content-single";
+@import "layouts/blog-page-header";
+@import "layouts/blog-page-footer";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
@@ -35,5 +45,4 @@
 @import "~hamburgers/_sass/hamburgers/hamburgers";
 @import "~slick-carousel/slick/slick";
 @import "~slick-carousel/slick/slick-theme";
-
 

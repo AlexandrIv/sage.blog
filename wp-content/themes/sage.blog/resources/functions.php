@@ -103,7 +103,7 @@ Container::getInstance()
 
 if( function_exists('acf_add_options_page') ) {
 
- acf_add_options_page(array(
+   acf_add_options_page(array(
     'page_title'    => 'Theme General Settings',
     'menu_title'    => 'Theme Settings',
     'menu_slug'     => 'theme-general-settings',
@@ -111,7 +111,7 @@ if( function_exists('acf_add_options_page') ) {
     'redirect'      => false
 ));
 
- acf_add_options_page(array(
+   acf_add_options_page(array(
     'page_title'    => 'Theme General Settings',
     'menu_title'    => 'Theme Settings',
     'menu_slug'     => 'theme-general-settings',
@@ -119,13 +119,13 @@ if( function_exists('acf_add_options_page') ) {
     'redirect'      => false
 ));
 
- acf_add_options_sub_page(array(
+   acf_add_options_sub_page(array(
     'page_title'    => 'Theme Header Settings',
     'menu_title'    => 'Header',
     'parent_slug'   => 'theme-general-settings',
 ));
 
- acf_add_options_sub_page(array(
+   acf_add_options_sub_page(array(
     'page_title'    => 'Theme Footer Settings',
     'menu_title'    => 'Footer',
     'parent_slug'   => 'theme-general-settings',
@@ -155,30 +155,203 @@ function true_load_posts(){
 
     foreach ($posts as $ajaxpost) {
         ?>
-            <div class="col-md-4">
-                <div class="courses-desc-box">
-                    <div class="top-box">
-                        <?php echo get_the_post_thumbnail( $ajaxpost->ID ); ?>
-                        <h3><?php echo $ajaxpost->post_title ?></h3>
-                        <p><?php echo $ajaxpost->short_text ?></p>
-                    </div>
-                    <div class="bottom-box">
-                        <ul>
-                            <li>Time : <?php echo $ajaxpost->time ?></li>
-                            <li><?php echo $ajaxpost->teacher ?></li>
-                        </ul>
-                        <a href="#">Join Now</a>
-                    </div>
+        <div class="col-md-4">
+            <div class="courses-desc-box">
+                <div class="top-box">
+                    <?php echo get_the_post_thumbnail( $ajaxpost->ID ); ?>
+                    <h3><?php echo $ajaxpost->post_title ?></h3>
+                    <p><?php echo $ajaxpost->short_text ?></p>
+                </div>
+                <div class="bottom-box">
+                    <ul>
+                        <li>Time : <?php echo $ajaxpost->time ?></li>
+                        <li><?php echo $ajaxpost->teacher ?></li>
+                    </ul>
+                    <a href="#">Join Now</a>
                 </div>
             </div>
+        </div>
         <?php
     }
-
     wp_die();
-
-
-
 }
 
 add_action('wp_ajax_loadmore', 'true_load_posts');
 add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
+
+
+
+
+
+
+function subscribes(){
+
+    $myemail = $_POST['email'];
+
+    if( email_exists($myemail) ){
+     echo 'error'; 
+ }
+ else{
+    echo 'succes';
+}
+
+$username = $myemail;
+$email = $myemail;
+$password = wp_generate_password();
+$role = 'Subscriber';
+
+$user_id = username_exists( $username );
+if ( !$user_id && email_exists($email) == false ) {
+    $user_id = wp_create_user( $username, $password, $email );
+    if( !is_wp_error($user_id) ) {
+        $user = get_user_by( 'id', $user_id );
+        $user->add_role( $role );
+    }
+}
+wp_die();
+}
+
+
+
+
+add_action('wp_ajax_subscribe', 'subscribes');
+add_action('wp_ajax_nopriv_subscribe', 'subscribes');
+
+
+
+
+
+
+
+
+
+
+function my_acf_init() {
+    acf_update_setting('google_api_key', get_field('google_api_key', 'option'));
+}
+add_action('acf/init', 'my_acf_init');
+
+
+
+
+
+
+
+
+
+show_admin_bar(false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function mytheme_comment( $comment, $args, $depth ) {
+    if ( 'div' === $args['style'] ) {
+        $tag       = 'div';
+        $add_below = 'comment';
+    } else {
+        $tag       = 'div';
+        $add_below = 'div-comment';
+    }
+
+    $classes = ' ' . comment_class( empty( $args['has_children'] ) ? '' : 'parent', null, null, false );
+    ?>
+
+    <<?php echo $tag, $classes; ?> id="comment-<?php comment_ID() ?>">
+    <?php if ( 'div' != $args['style'] ) { ?>
+        <div id="div-comment-<?php comment_ID() ?>" class="comment-body"><?php
+    } ?>
+
+    <div class="comment-author-img">
+        <?php  
+        if ( $args['avatar_size'] != 0 ) {
+            $argss = array(
+                'height' => 60,
+                'width' => 60,
+            );
+            echo get_avatar( $comment, $argss['avatar_size'] );
+        } 
+        ?>
+    </div>
+
+    <div class="comment-info">
+
+        <div class="comment-author vcard">
+             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/incon-user.png" alt="">
+
+            <?php
+            printf(
+                __( '<cite class="fn">%s</cite> <span class="says"> &#8226 </span>' ),
+                get_comment_author_link()
+            );
+            ?>
+            <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
+                <?php
+                printf(
+                    __( '%1$s' ),
+                    get_comment_date()
+                ); ?>
+            </a>
+            <?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+        </div>
+        <?php if ( $comment->comment_approved == '0' ) { ?>
+            <em class="comment-awaiting-moderation">
+                <?php _e( 'Your comment is awaiting moderation.' ); ?>
+            </em><br/>
+        <?php } ?>
+        <div class="comment-text">
+            <?php comment_text(); ?>
+        </div>
+
+        <div class="reply">
+        <?php 
+            $post_id = get_the_ID();
+            $comment_id =get_comment_ID();
+
+            //get the setting configured in the admin panel under settings discussions "Enable threaded (nested) comments  levels deep"  
+            $max_depth = get_option('thread_comments_depth');
+            //add max_depth to the array and give it the value from above and set the depth to 1
+            $default = array(
+                'add_below'  => 'comment',
+                'respond_id' => 'respond',
+                'reply_text' => __('Reply'),
+                'login_text' => __('Log in to Reply'),
+                'depth'      => 1,
+                'before'     => '',
+                'after'      => '',
+                'max_depth'  => $max_depth
+                );
+            comment_reply_link($default,$comment_id,$post_id);
+          ?>
+          <pre>
+              <?php var_dump($comment_id); ?>
+          </pre>
+        </div>
+    </div>
+    <?php if ( 'div' != $args['style'] ) { ?>
+    </div>
+<?php }
+}

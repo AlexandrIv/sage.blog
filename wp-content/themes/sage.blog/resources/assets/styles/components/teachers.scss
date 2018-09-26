@@ -2,6 +2,7 @@
 	width: 100%;
 	height: auto;
 	background-color: #f1f1f1;
+	padding-bottom: 50px;
 	h2 {
 		color: #1a1a1a;
 		font-family: "Nunito Sans";
@@ -68,6 +69,33 @@
 			font-weight: 700;
 		}
 	}
+
+	.teachers-tablet {
+	.teachers-block {
+		.slick-dots {
+			bottom: -50px;
+			li {
+				button {
+					border: 2px solid #1a1a1a;
+					height: 10px;
+					width: 10px;
+					border-radius: 50%;
+
+				}
+				button:before {
+					display: none;
+				}
+			}
+			.slick-active {
+				button {
+					background: #1a1a1a;
+					border-radius: 50%;
+					border-color: #1a1a1a;
+				}
+			}
+		}
+	}
+}
 }
 
 @media only screen and (min-width: 992px) {
@@ -122,45 +150,18 @@
 			padding: 0;
 		}
 	}
-}
 
 
-
-
-.slick-dots li {
-	height: 10px!important;
-	width: 10px!important;
-}
-
-.slick-active {
-	button {
-		background-color: #1a1a1a!important;
-		opacity: 1!important;
+	.teachers-tablet {
+		height: 100%;
 	}
 }
 
-.slick-dots li button {
-	height: 10px!important;
-	width: 10px!important;
-	border: 2px solid #1a1a1a!important;
-	border-radius: 50%;
-	opacity: 0.7;
-}
-
-.slick-dots li button:before {
-	display: none;
-}
-
-.slick-dots {
-	position: relative!important;
-	display: inline-block!important;
-	width: 100%!important;
-	height: auto!important;
-	text-align: center!important;
-	margin-bottom: 20px!important;
-}
 
 
-.teachers-tablet {
-	height: 100%;
-}
+
+
+
+
+
+

@@ -36,7 +36,7 @@ function Courses() {
 		'description'           => __( 'Adds education posts', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
-		'taxonomies'            => array( 'features.posts' ),
+		'taxonomies'            => array( 'features.posts,programs' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -54,4 +54,11 @@ function Courses() {
 
 }
 add_action( 'init', 'Courses', 0 );
- ?>
+
+
+
+
+
+
+
+

@@ -32,6 +32,11 @@ class App extends Controller
     }
 
 
+    public function slideshow(){
+        return get_field('slideshow', 'option');
+    }
+
+
     
 
     public static function slideshow_time(){
@@ -102,5 +107,49 @@ class App extends Controller
         return get_field('choosing_a_course', 'option');
     }
    
+    public static function teachers(){
+        return get_field('select_teachers_to_display', 'option');
+    }
+
+    public static function transition_time(){
+        return get_field('transition_time', 'option');
+    }
+
+    public static function clients(){
+        return get_field('clients', 'option');
+    }
+
+    public static function contact_map(){
+        return get_field('map', 'option');
+    }
+
+    public static function api_key(){
+        return get_field('google_api_key', 'option');
+    }
+    
+    public static function email(){
+        return get_field('email', 'option');
+    }
+    public static function phone(){
+        return get_field('phone', 'option');
+    }
+
+    public static function map_blog_page(){
+        return get_field('map_blog_page', get_the_ID(), 'option');
+    }
+
+    public static function contact_page_info(){
+        return get_field('contact_page_info', get_the_ID(), 'option');
+    }
+
+    public static function contact_page_adress(){
+        return get_field('contact_page_adress', get_the_ID(), 'option');
+    }
+
+    public static function contact_7_shortcode(){
+        return get_field('contact_7_shortcode', get_the_ID(), 'option');
+    }
+
+  
     
 }

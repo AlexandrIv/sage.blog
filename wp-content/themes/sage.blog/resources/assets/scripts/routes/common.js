@@ -10,71 +10,18 @@ export default {
 				})
 			});
 		});
-
-
-		// JavaScript to be fired on all pages, after page specific JS is fired
-		var slideNow = 1;
-		var slideCount = $('#slidewrapper').children().length;
-		var navBtnId = 0;
-		var translateWidth = 0;
-		const slideInterval = Object.values(window.slide_time);
-
-		for (var val = 1; val <= slideCount; val++) {
-			$('#nav-btns').append('<li class="slide-nav-btn"></li>');
-		}
-
-
-		$("#nav-btns").on("click", ".slide-nav-btn", function() {
-			$("#nav-btns .slide-nav-btn").removeClass("is-active");
-			$(this).addClass("is-active");
-		});
-
-		$(document).ready(function() {
-			var switchInterval = setInterval(SliderNextSlide, slideInterval);
-
-			$('#viewport').hover(function() {
-				clearInterval(switchInterval);
-			}, function() {
-				switchInterval = setInterval(SliderNextSlide, slideInterval);
-			});
-
-			$('.slide-nav-btn').click(function() {
-				navBtnId = $(this).index();
-				if (navBtnId + 1 != slideNow) {
-					translateWidth = -$('#viewport').width() * (navBtnId);
-					$('#slidewrapper').css({
-						'transform': 'translate(' + translateWidth + 'px, 0)',
-						'-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-						'-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-					});
-					slideNow = navBtnId + 1;
-				}
-			});
-		});
-		$("#nav-btns").on("click", ".slide-nav-btn", function() {
-			$("#nav-btns .slide-nav-btn").removeClass("is-active");
-			$(this).addClass("is-active");
-		});
-
-		function SliderNextSlide() {
-			if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-				$('#slidewrapper').css('transform', 'translate(0, 0)');
-				slideNow = 1;
-			} else {
-				translateWidth = -$('#viewport').width() * (slideNow);
-				$('#slidewrapper').css({
-					'transform': 'translate(' + translateWidth + 'px, 0)',
-					'-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-					'-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-				});
-
-				slideNow++;
-			}
-		}
-
+	
 	},
 
 	finalize() {
+		$('.slick-slideshow').slick({
+			infinite: true,
+			autoplay: true,
+			dots: true,
+			autoplaySpeed: Object.values(window.slide_time),
+			speed: 800,
+			arrows: false,
+		});
 
 
 
@@ -90,9 +37,6 @@ export default {
 			for (var i = 1; i <= slideCountCourses; i++) {
 				$('.courses-nav-btns').append('<li class="courses-nav-btn"></li>');
 			}
-
-
-
 
 			$('.courses-nav-btn').click(function() {
 				navBtnIdCourses = $(this).index();
@@ -145,7 +89,7 @@ export default {
 		});
 
 
-		$('.variable-width').slick({
+		$('.teachers-block').slick({
 			dots: true,
 			infinite: true,
 			speed: 300,
@@ -153,7 +97,118 @@ export default {
 			centerMode: true,
 			variableWidth: true,
 		});
-	},
+
+
+
+		$('.client-images').slick({
+			infinite: true,
+			slidesToShow: 5,
+			centerMode: true,
+			variableWidth: true,
+			asNavFor: '.client-text',
+			prevArrow: '<div class="prev"></div>',
+			nextArrow: '<div class="next"></div>',
+			responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 1,
+					centerMode: false,
+					variableWidth: false,
+					dots: true,
+				},
+			},
+			],
+		});
+
+
+		$('.client-text').slick({
+			infinite: true,
+			slidesToShow: 1,
+			asNavFor: '.client-images',
+			prevArrow: '<div class="prev"></div>',
+			nextArrow: '<div class="next"></div>',
+		});
+
+
+		$('.blog-block').slick({
+			centerMode: true,
+			slidesToShow: 5,
+			responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+					centerMode: true,
+					variableWidth: true,
+				},
+			},
+			],
+		});
+
+
+
+
+
+
+
+		jQuery(function($){
+			$('#subscribe').click(function(){
+				var inputName = document.getElementById("email");
+				if (!inputName.value.trim()) {
+					$(".message").fadeIn().delay(4000).fadeOut();
+					$('.message').text('Enter your email address!!!');
+					document.getElementById("message").style.color="red";
+				}
+				else {
+					window.email = document.getElementById("email").value;
+					$(this).text('Registry');
+					$.ajax({
+						url: window.ajaxurl,
+						type: 'POST',
+						data: {
+							action : 'subscribe',
+							email : window.email,
+						},
+						success: function( data ){
+							if(data == 'error'){
+								$(".message").fadeIn().delay(4000).fadeOut();
+								$('.message').text('Email already exists!!!');
+								document.getElementById("message").style.color="red";
+							}
+							else if(data == 'succes'){
+								$(".message").fadeIn().delay(4000).fadeOut();
+								$('.message').text('Subscription was made!');
+								document.getElementById("message").style.color="#27ae60";
+							}
+							$('#subscribe').text('Sign Up');
+						},
+					});
+				}
+			});
+		});
+
+
+
+
+
+
+
+		
+		$('.blog-page-slideshow').slick({
+			infinite: true,
+			autoplay: true,
+			dots: false,
+			autoplaySpeed: 2000,
+			speed: 800,
+			arrows: false,
+		});
+
+
+
+
+
+},
 };
 
 

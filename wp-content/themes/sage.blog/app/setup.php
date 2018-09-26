@@ -101,6 +101,10 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
+        'name'          => __('Single-sidebar', 'sage'),
+        'id'            => 'sidebar-single'
+    ] + $config);
+    register_sidebar([
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);

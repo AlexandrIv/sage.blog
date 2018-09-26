@@ -1,0 +1,323 @@
+.content-single {
+	margin-top: 60px;
+	.breadcrumbs {
+		border-bottom: 1px solid #eeeeee;
+		padding-bottom: 35px;
+		margin-bottom: 40px;
+		color: #b7b7b7;
+		span {
+			margin: 0 5px;
+			a {
+				color: #23a0bf;
+				font-family: Montserrat;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 24px;
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+			.current-item{
+				color: #636363;
+				letter-spacing: 0.07px;
+				text-decoration: none;
+			}
+		}
+	}
+	.post-single-page {
+		article {
+			h2 {
+				color: #333333;
+				font-family: Montserrat;
+				font-size: 36px;
+				font-weight: 700;
+				line-height: 24px;
+			}
+			.meta {
+				ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					li {
+						display: inline-block;
+						color: #b5b5b5;
+						font-family: Montserrat;
+						font-size: 14px;
+						font-weight: 700;
+						line-height: 24px;
+						margin-right: 25px;
+						a {
+							color: #b5b5b5;
+							font-family: Montserrat;
+							font-size: 14px;
+							font-weight: 700;
+							line-height: 24px;
+							text-decoration: none;
+							a {
+								color: #000000!important;
+							}
+						} 
+					}
+				}
+			}
+			.thumbnail {
+				img {
+					display: inline-block;
+					width: 100%;
+					height: auto;
+				}
+			}
+			.content{
+				p {
+					iframe {  
+						display: inline-block;
+						width: 100%;
+						height: 500px;
+					}
+				}
+				blockquote {
+					border-left: 5px solid #23a0bf;
+					margin: 0.25em 0;
+					margin-left: 65px;
+					padding: 0.25em 40px;
+					color: #898989;
+					font-family: Montserrat;
+					font-size: 14px;
+					font-weight: 700;
+					line-height: 24px;
+					cite {
+						width: 100%;
+						display: inline-block;
+						color: #acacac;
+						font-family: Montserrat;
+						font-size: 16px;
+						font-weight: 700;
+						line-height: 24px;
+						text-transform: uppercase;
+						letter-spacing: 3.2px;
+					}
+					img {
+						width: auto;
+						height: auto;
+					}
+				}
+			}
+		}
+		.tag {
+			width: 100%;
+			height: auto;
+			margin-top: 30px;
+			margin-bottom: 25px;
+			padding-bottom: 35px;
+			border-bottom: 1px solid #eeeeee;
+			a {
+				color: #333333;
+				font-family: "Open Sans";
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 24px;
+				text-transform: uppercase;
+				letter-spacing: 0.35px;
+				padding: 14px 16px;
+				border: 1px solid #333333;
+				border-radius: 20px;
+				text-decoration: none;
+				margin-right: 5px;
+			}
+		}
+		.share {
+			width: 100%;
+			height: auto;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 25px;
+			margin-bottom: 35px;
+			border-bottom: 1px solid #eeeeee;
+			a {
+				color: #333333;
+				font-family: "Open Sans";
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 24px;
+				letter-spacing: 0.45px;
+				border: 1px solid #333333;
+				padding: 17px 30px;
+				margin: 12px;
+				text-decoration: none;
+			}
+		}
+		.comment-form {
+			width: 100%;
+			.comment-form-author, .comment-form-email, .comment-form-url {
+				width: 30%;
+				display: inline-flex;
+				flex-direction: column;
+				margin: 0 12px;
+				margin-bottom: 30px;
+			}
+			.submit {
+				width: 100%;
+				border: 1px solid #c2c2c2;
+				background: none;
+				color: #555555;
+				font-family: Montserrat;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 24px;
+				text-transform: uppercase;
+				letter-spacing: 0.35px;
+			}
+			p {
+				input, textarea{
+					border: 1px solid #c2c2c2;
+				}
+			}
+			p {
+				textarea {
+					resize: none;
+				}
+			}
+		}
+		.comment-block {
+			.comments {
+				h2 {
+					color: #23a0bf;
+					font-family: Montserrat;
+					font-size: 14px;
+					font-weight: 700;
+					line-height: 24px;
+					text-transform: uppercase;
+					letter-spacing: 0.35px;
+					margin-bottom: 20px;
+				}
+			}
+			.comment {
+				.comment-body {
+					display: flex;
+					flex-direction: row;
+					border-bottom: 1px solid #eeeeee;
+					margin-bottom: 30px;
+					.comment-info {
+						margin-left: 20px;
+						.comment-author {
+							margin-bottom: 20px;
+							img {
+								width: 12px;
+								height: 14px;
+							}
+							.says {
+								color: #cccccc;
+							}
+							a {
+								color: #b7b7b7;
+								font-family: Montserrat;
+								font-size: 14px;
+								font-weight: 400;
+								line-height: 24px;
+							}
+							.fn {
+								color: #b7b7b7;
+								font-family: Montserrat;
+								font-size: 14px;
+								font-weight: 400;
+								line-height: 24px;
+							}
+						}
+						.comment-text {
+							color: #7d7d7d;
+							font-family: "Open Sans";
+							font-size: 14px;
+							font-weight: 400;
+							line-height: 24px;
+						}
+						.reply {
+							border-left: 1px solid #eeeeee;
+							padding-left: 13px;
+							margin-bottom: 30px;
+							a {
+								color: #7d7d7d;
+								font-family: Montserrat;
+								font-size: 14px;
+								font-weight: 700;
+								line-height: 24px;
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+			.comment-respond {
+				h3 {
+					color: #7d7d7d;
+					font-family: Montserrat;
+					font-size: 28px;
+					font-weight: 700;
+					line-height: 24px;
+					letter-spacing: -0.7px;
+				}
+			}
+		}
+	}
+	.sidebar-single {
+		border-left: 1px solid #eeeeee;
+		padding-left: 20px;
+		h3 {
+			color: #23a0bf;
+			font-family: Montserrat;
+			font-size: 12px;
+			font-weight: 700;
+			line-height: 32px;
+			text-transform: uppercase;
+			letter-spacing: 0.6px;
+			margin-top: 10px;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			li {
+				border-bottom: 1px solid #eeeeee;
+				margin-bottom: 20px;
+				a {
+					color: #252525;
+					font-family: "Open Sans";
+					font-size: 14px;
+					font-weight: 700;
+					line-height: 24px;
+					text-decoration: none;
+				}
+				span{
+					display: inline-block;
+					width: 100%;
+					color: #b5b5b5;
+					font-family: Montserrat;
+					font-size: 10px;
+					font-weight: 400;
+					text-transform: uppercase;
+					color: #333333;
+					margin-bottom: 23px;
+				}
+			}
+		}
+		.widget_archive {
+			ul {
+				li {
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

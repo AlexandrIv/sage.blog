@@ -7,14 +7,17 @@ if (post_password_required()) {
 <section id="comments" class="comments">
   <?php if(have_comments()): ?>
     <h2>
-      <?php echo sprintf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'sage'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>'); ?>
+      Comments
+      
+      <?php echo get_comments_number(); ?>
 
     </h2>
 
-    <ol class="comment-list">
-      <?php echo wp_list_comments(['style' => 'ol', 'short_ping' => true]); ?>
+    <div class="comment-list">
+      
+      <?php echo e(wp_list_comments('type=comment&callback=mytheme_comment')); ?>
 
-    </ol>
+    </div>
 
     <?php if(get_comment_pages_count() > 1 && get_option('page_comments')): ?>
       <nav>
