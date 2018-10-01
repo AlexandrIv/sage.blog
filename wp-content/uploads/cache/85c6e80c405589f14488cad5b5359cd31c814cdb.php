@@ -1,28 +1,22 @@
 <div class="blog-page-slideshow">
-			<?php
-				$args = array(
-					'post_type' => 'post',
-					'numberposts'	=> 3,
-				);
-				$posts = get_posts($args)
-			?>
-			<?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-				<div class="blog-slide" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID); ?>');">
-					<div class="blog-slide-bg"></div>
-					<div class="blog-slide-text">
-						<h3><?php echo $post->post_title; ?></h3>
-						<p><?php echo wp_trim_words($post->post_content, 10); ?></p>
-						<a href="#">Read more</a>
-					</div>
-				</div>
-			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-		
-	
-
+	<?php
+	$args = array(
+		'post_type' => 'post',
+		'numberposts'	=> 3,
+	);
+	$posts = get_posts($args)
+	?>
+	<?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+		<div class="blog-slide" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID); ?>');">
+			<div class="blog-slide-bg"></div>
+			<div class="blog-slide-text">
+				<h3><?php echo $post->post_title; ?></h3>
+				<p><?php echo wp_trim_words($post->post_content, 10); ?></p>
+				<a href="<?php echo get_permalink($post); ?>">Read more</a>
+			</div>
+		</div>
+	<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </div>
-			
-
-
 <div class="container">
 	<div class="row">
 		<div class="col-md-9">
@@ -36,7 +30,7 @@
 							<li><a><?php echo e(get_the_date()); ?></a></li>
 							<li><a href="<?php echo e(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php echo e(get_the_author()); ?></a></li>
 							<li><a href="#"><?php echo e(comments_number()); ?></a></li>
-							<li><a href="<?php echo get_the_category('ID'); ?>">Posted in <span><?php echo the_category('ID'); ?></span></a></li>
+							<li>Posted in <span><?php echo the_category('ID'); ?></span></li>
 						</ul>
 						<p><?php echo the_excerpt(); ?></p>
 						<div class="read-more">

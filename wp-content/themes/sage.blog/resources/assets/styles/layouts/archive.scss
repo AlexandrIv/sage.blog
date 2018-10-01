@@ -1,0 +1,39 @@
+.content-archive {
+	margin-top: 60px;
+	h1 {  
+		color: #333333;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 24px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #eeeeee;
+	}
+	.breadcrumbs-archive {
+		border-bottom: 1px solid #eeeeee;
+		padding-bottom: 35px;
+		margin-bottom: 40px;
+		color: #b7b7b7;
+		a {
+			color: #23a0bf;
+			font-family: Montserrat;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 24px;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		.home {
+			font-family: Montserrat;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 24px;
+			text-transform: uppercase;
+			color: #23a0bf;
+		}
+		.sep {
+			color: #b7b7b7;
+			margin: 0 10px;
+		}
+	}
+}

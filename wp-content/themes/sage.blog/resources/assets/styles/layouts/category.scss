@@ -1,0 +1,49 @@
+.content-category {
+	margin-top: 60px;
+	h1 {
+		color: #23a0bf;
+		font-family: Montserrat;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 24px;
+		text-transform: uppercase;
+		letter-spacing: 0.7px;
+		margin-bottom: 7px;
+	}
+	h2 {
+		color: #333333;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 24px;
+		border-bottom: 1px solid #eeeeee;
+		padding-bottom: 30px;
+	}
+	.breadcrumbs-category {
+		border-bottom: 1px solid #eeeeee;
+		padding-bottom: 35px;
+		margin-bottom: 40px;
+		color: #b7b7b7;
+		a {
+			color: #23a0bf;
+			font-family: Montserrat;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 24px;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		.home {
+			font-family: Montserrat;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 24px;
+			text-transform: uppercase;
+			color: #23a0bf;
+		}
+		.sep {
+			color: #b7b7b7;
+			margin: 0 10px;
+		}
+	}
+}

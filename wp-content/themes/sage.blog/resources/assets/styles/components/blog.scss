@@ -34,6 +34,7 @@
 	.blog-block {
 		width: 100%;
 		height: auto;
+		overflow: hidden;
 		.slick-list {
 			margin: 0!important;
 		}
@@ -76,6 +77,10 @@
 					font-weight: 400;
 					line-height: 24px;
 				}
+				@media only screen and (max-width: 768px) {
+					width: 60%;
+					margin: 0 auto; 
+				}
 			}
 		}
 		@media only screen and (max-width: 992px) {
@@ -85,8 +90,6 @@
 			}
 		}
 	}
-
-	
 }
 
 

@@ -6,7 +6,7 @@
 			<div class="row">
 				@foreach( $taxonomies as $taxonomy )
 				@php $thumbnail = get_field('image_programs', $taxonomy->taxonomy . '_' . $taxonomy->term_id); @endphp
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 					<a href="#">
 						<div class="programs-box">
 							<div class="front" style="transition: {!! $transition !!}s;">

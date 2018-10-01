@@ -53,13 +53,20 @@
 			align-items: center;
 			justify-content: center;
 			text-align: center;
+			@media only screen and (max-width : 992px) {
+				width: 80%;
+				margin: 0 auto;
+			}
 			h3 {
 				color: #ffffff;
 				font-family: Montserrat;
 				font-size: 36px;
 				font-weight: 700;
-				line-height: 24px;
+				line-height: 36px;
 				text-transform: uppercase;
+				@media only screen and (max-width : 992px) {
+					line-height: 40px;
+				}
 			}
 			p {
 				color: #ffffff;
@@ -133,6 +140,11 @@
 				li {
 					display: inline-block;
 					margin-right: 30px;
+					color: #b5b5b5;
+					font-family: Montserrat;
+					font-size: 14px;
+					font-weight: 700;
+					line-height: 24px;
 					a {
 						color: #b5b5b5;
 						font-family: Montserrat;
@@ -140,7 +152,9 @@
 						font-weight: 700;
 						line-height: 24px;
 						text-decoration: none;
-						span {
+					}
+					span {
+						a {
 							color: #000000;
 						}
 					}

@@ -6,7 +6,7 @@
 			<div class="row">
 				<?php $__currentLoopData = $taxonomies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $taxonomy): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 				<?php $thumbnail = get_field('image_programs', $taxonomy->taxonomy . '_' . $taxonomy->term_id); ?>
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 					<a href="#">
 						<div class="programs-box">
 							<div class="front" style="transition: <?php echo $transition; ?>s;">

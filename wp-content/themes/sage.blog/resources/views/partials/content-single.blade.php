@@ -17,10 +17,8 @@
   <div class="container">
    <div class="row">
     <div class="col-md-9">
-      <div class="breadcrumbs" typeof="BreadcrumbList">
-        @if(function_exists('bcn_display'))
-        {!! bcn_display(); !!}
-        @endif
+      <div class="breadcrumbs">
+       {!! the_breadcrumb() !!}
       </div>
       <div class="post-single-page">
         <article>
@@ -30,7 +28,7 @@
               <li>{{ get_the_date() }}</li>
               <li><a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}">{{ get_the_author() }}</a></li>
               <li>{{ comments_number() }}</li>
-              <li><a href="{!! get_the_category('ID') !!}">Posted in <span>{!! the_category('ID') !!}</span></a></li>
+              <li>Posted in <span>{!! the_category('ID') !!}</span></li>
             </ul>
           </div>
           <div class="thumbnail">

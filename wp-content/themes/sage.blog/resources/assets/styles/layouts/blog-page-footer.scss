@@ -11,8 +11,19 @@
 		border-bottom: 1px solid #262626;
 		padding: 45px 0;
 		border-bottom: 1px solid #262626;
+		@media only screen and (max-width : 992px) {
+			display: flex;
+			flex-direction: column;
+			width: 80%;
+			margin: 0 auto;
+			justify-content: center;
+			text-align: center;
+		}
 		.blog-recent-footer {
 			width: 25%;
+			@media only screen and (max-width : 992px) {
+				width: 100%;
+			}
 			h3 {
 				color: #989898;
 				font-family: Montserrat;
@@ -53,6 +64,9 @@
 		.blog-pages-footer {
 			width: 25%;
 			padding: 0 30px;
+			@media only screen and (max-width : 992px) {
+				width: 100%;
+			}
 			h3 {
 				color: #989898;
 				font-family: Montserrat;
@@ -83,6 +97,9 @@
 		}
 		.blog-categories-footer {
 			width: 25%;
+			@media only screen and (max-width : 992px) {
+				width: 100%;
+			}
 			h3 {
 				color: #989898;
 				font-family: Montserrat;
@@ -109,6 +126,9 @@
 		}
 		.blog-text-widget {
 			width: 25%;
+			@media only screen and (max-width : 992px) {
+				width: 100%;
+			}
 			h3 {
 				color: #989898;
 				font-family: Montserrat;

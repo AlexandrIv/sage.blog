@@ -4,11 +4,9 @@
   <div class="container">
    <div class="row">
     <div class="col-md-9">
-      <div class="breadcrumbs" typeof="BreadcrumbList">
-        <?php if(function_exists('bcn_display')): ?>
-        <?php echo bcn_display();; ?>
+      <div class="breadcrumbs">
+       <?php echo the_breadcrumb(); ?>
 
-        <?php endif; ?>
       </div>
       <div class="post-single-page">
         <article>
@@ -18,7 +16,7 @@
               <li><?php echo e(get_the_date()); ?></li>
               <li><a href="<?php echo e(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php echo e(get_the_author()); ?></a></li>
               <li><?php echo e(comments_number()); ?></li>
-              <li><a href="<?php echo get_the_category('ID'); ?>">Posted in <span><?php echo the_category('ID'); ?></span></a></li>
+              <li>Posted in <span><?php echo the_category('ID'); ?></span></li>
             </ul>
           </div>
           <div class="thumbnail">

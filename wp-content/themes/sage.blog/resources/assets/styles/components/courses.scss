@@ -9,8 +9,6 @@
 		font-size: 48px;
 		font-weight: 700;
 		line-height: 60px;
-		padding-top: 80px;
-		padding-bottom: 60px;
 	}
 }
 
@@ -24,6 +22,7 @@
 		margin-bottom: 36px;
 		width: 100%;
 		height: auto;
+		display: inline-block;
 	}
 	h3 {
 		color: #1a1a1a;
@@ -83,70 +82,50 @@
 	.desctop-block {
 		display: none;
 	}
-
-	.courses-slides {
-		width: 100%;
-	}
-
-	.courses-viewport {
-		width: 100%;
-		position: relative;
-		overflow: hidden;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		-o-user-select: none;
-		user-select: none;
-		text-align: center;
-	}
-
-	.courses-slidewrapper {
-		position: relative;
-		-webkit-transition: 1s;
-		-o-transition: 1s;
-		transition: 1s;
-		-webkit-transition-timing-function: cubic-bezier(0.67, 0.01, 0.23, 1);
-		-o-transition-timing-function: cubic-bezier(0.67, 0.01, 0.23, 1);
-		transition-timing-function: cubic-bezier(0.67, 0.01, 0.23, 1);
-		margin: 0;
-		padding: 0;
-	}
-
-	.courses-slide {
-		list-style: none;
-		display: inline;
-		float: left;
-		background-color: #f1f1f1;
-	}
-
-	.courses-nav-btns {
-		display: inline-block;
-		text-align: center;
-		width: 100%;
-		height: auto;
-		padding: 0;
-		margin: 0;
-		margin-top: 22px;
-		margin-bottom: 10px;
-	}
-
-	.courses-nav-btn {
-		position: relative;
-		display: inline-block;
-		list-style: none;
-		width: 14px;
-		height: 14px;
-		border: 2px solid #1a1a1a;
-		border-radius: 50%;
-		margin: 4px;
-		&:hover {
-			cursor: pointer;
-			background-color: #27ae60;
-			border-color: #27ae60; 
-		}
-		.active {
-			background-color: #27ae60;
-			border-color: #27ae60;
+	
+	.courses {
+		.tablet-block {
+			.courses-slider {
+				margin-bottom: 15px;
+				.slick-dots {
+					position: relative;
+					margin-top: 15px;
+					bottom: 0;
+					li {
+						height: 14px;
+						width: 14px;
+						button {
+							height: 14px;
+							width: 14px;
+							border: 2px solid #1a1a1a;
+							border-radius: 50%;
+						}
+						button:before {
+							display: none;
+						}
+					}
+					li.slick-active {
+						button {
+							border-color: #27ae60;
+							background-color: #27ae60;
+						}
+					}
+				}
+				.slick-list {
+					.slick-track {
+						.slick-slide {
+							div {
+								.courses-slide-box {
+									padding: 0 25px;
+									.courses-slide {
+										background-color: #f1f1f1;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

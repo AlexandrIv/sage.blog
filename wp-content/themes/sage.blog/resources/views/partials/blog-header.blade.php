@@ -23,20 +23,24 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="blog-menu-header">
 		<div class="container">
 			<div class="row">
 				<div class="blog-menu-header-block">
+					<a class="menu-btn">
+						<span></span>
+					</a>
 					<div class="menu">
 						@if (has_nav_menu('primary_navigation'))
-							{!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
+						{!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
 						@endif
-					</div>
-					<div class="search">
-						<form role="search" method="get" action="{!! home_url( '/' ) !!}">
-							<input id="searchform" type="text" class="search-input" placeholder="search" value="<?php echo get_search_query() ?>" name="s" id="s">
-							<input type="submit" id="searchsubmit" class="search-button" value="">
-						</form>
+						<div class="search">
+							<form role="search" method="get" action="{!! home_url( '/' ) !!}">
+								<input id="searchform" type="text" class="search-input" placeholder="search" value="<?php echo get_search_query() ?>" name="s" id="s">
+								<input type="submit" id="searchsubmit" class="search-button" value="">
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>

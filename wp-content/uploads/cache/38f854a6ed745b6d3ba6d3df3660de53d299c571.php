@@ -13,7 +13,7 @@ $blogposts = get_posts($args);
 					<div class="blog-box-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($blogpost->ID);; ?>);"></div>
 					<div class="blog-text-box">
 						<h3><?php echo $blogpost->post_title; ?></h3>
-						<p><?php echo $blogpost->post_content; ?></p>
+						<p><?php echo get_the_excerpt($blogpost); ?></p>
 					</div>
 				</div>
 				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

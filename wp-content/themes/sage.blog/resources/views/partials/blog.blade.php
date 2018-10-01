@@ -13,7 +13,7 @@ $blogposts = get_posts($args);
 					<div class="blog-box-image" style="background-image: url({!! get_the_post_thumbnail_url($blogpost->ID); !!});"></div>
 					<div class="blog-text-box">
 						<h3>{!! $blogpost->post_title !!}</h3>
-						<p>{!! $blogpost->post_content !!}</p>
+						<p>{!! get_the_excerpt($blogpost) !!}</p>
 					</div>
 				</div>
 				@endforeach

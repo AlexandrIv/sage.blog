@@ -5,17 +5,22 @@
 		padding-bottom: 35px;
 		margin-bottom: 40px;
 		color: #b7b7b7;
+		font-family: Montserrat;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 24px;
+		text-transform: uppercase;
+		a {
+			color: #23a0bf;
+			font-family: Montserrat;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 24px;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
 		span {
 			margin: 0 5px;
-			a {
-				color: #23a0bf;
-				font-family: Montserrat;
-				font-size: 14px;
-				font-weight: 700;
-				line-height: 24px;
-				text-transform: uppercase;
-				text-decoration: none;
-			}
 			.current-item{
 				color: #636363;
 				letter-spacing: 0.07px;
@@ -54,6 +59,8 @@
 							font-weight: 700;
 							line-height: 24px;
 							text-decoration: none;
+						}
+						span {
 							a {
 								color: #000000!important;
 							}
@@ -396,6 +403,7 @@
 			}
 		}
 	}
+
 }
 
 

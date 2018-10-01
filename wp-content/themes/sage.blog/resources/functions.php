@@ -244,8 +244,73 @@ show_admin_bar(false);
 
 
 
+// function the_breadcrumb() {
+//     if (!is_home()) {
+//         echo '<a class="home" href="';
+//         echo get_option('home');
+//         echo '">';
+//         bloginfo('name');
+//         echo "</a> <span class='ampers'>></span> <span>ARCHIVE BY</span> ";
+//         if (is_category() || is_single()) {
+//             the_category('title_li=');
+//             if (is_single()) {
+//                 echo " Â» ";
+//                 the_title();
+//             }
+//         } elseif (is_page()) {
+//             echo the_title();
+//         }
+//         if()
+//     }
+// }
 
+function the_breadcrumb() {
 
+$sep = ' <span class="sep"> > </span> ';
+
+    if (!is_front_page()) {
+
+        echo '<a class="home" href="';
+        echo get_option('home');
+        echo '">';
+        bloginfo('name');
+        echo '</a>' . $sep;
+
+        if (is_category() || is_single() ){
+            the_category('title_li=');
+        } elseif (is_archive() || is_single()){
+            if ( is_day() ) {
+                printf( __( '%s', 'text_domain' ), get_the_date() );
+            } elseif ( is_month() ) {
+                printf( __( '%s', 'text_domain' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'text_domain' ) ) );
+            } elseif ( is_year() ) {
+                printf( __( '%s', 'text_domain' ), get_the_date( _x( 'Y', 'yearly archives date format', 'text_domain' ) ) );
+            } else {
+                _e( 'Blog Archives', 'text_domain' );
+            }
+        }
+
+        if (is_single()) {
+            echo $sep;
+            the_title();
+        }
+
+        if (is_page()) {
+            echo the_title();
+        }
+
+        if (is_home()){
+            global $post;
+            $page_for_posts_id = get_option('page_for_posts');
+            if ( $page_for_posts_id ) { 
+                $post = get_page($page_for_posts_id);
+                setup_postdata($post);
+                the_title();
+                rewind_posts();
+            }
+        }
+    }
+}
 
 
 

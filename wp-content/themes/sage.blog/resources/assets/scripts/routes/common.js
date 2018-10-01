@@ -11,6 +11,12 @@ export default {
 			});
 		});
 
+		$('.menu-btn').on('click', function(e){
+			e.preventDefault;
+			$(this).toggleClass('menu-btn-active');
+			$(".menu").slideToggle();
+		});
+
 	},
 
 	finalize() {
@@ -25,49 +31,49 @@ export default {
 
 
 
-		var slideNowCourses = 1;
-		var slideCountCourses = $('.courses-slide').length;
-		var navBtnIdCourses = 0;
-		var translateWidthCourses = 0;
+	// 	var slideNowCourses = 1;
+	// 	var slideCountCourses = $('.courses-slide').length;
+	// 	var navBtnIdCourses = 0;
+	// 	var translateWidthCourses = 0;
 
-		$(document).ready(function() {
+	// 	$(document).ready(function() {
 
 
-			console.log(slideCountCourses);
-			for (var i = 1; i <= slideCountCourses; i++) {
-				$('.courses-nav-btns').append('<li class="courses-nav-btn"></li>');
-			}
+	// 		console.log(slideCountCourses);
+	// 		for (var i = 1; i <= slideCountCourses; i++) {
+	// 			$('.courses-nav-btns').append('<li class="courses-nav-btn"></li>');
+	// 		}
 
-			$('.courses-nav-btn').click(function() {
-				navBtnIdCourses = $(this).index();
+	// 		$('.courses-nav-btn').click(function() {
+	// 			navBtnIdCourses = $(this).index();
 
-				if (navBtnIdCourses + 1 != slideNowCourses) {
-					translateWidthCourses = -$('.courses-viewport').width() * (navBtnIdCourses);
-					$('.courses-slidewrapper').css({
-						'transform': 'translate(' + translateWidthCourses + 'px, 0)',
-						'-webkit-transform': 'translate(' + translateWidthCourses + 'px, 0)',
-						'-ms-transform': 'translate(' + translateWidthCourses + 'px, 0)',
-					});
-					slideNowCourses = navBtnIdCourses + 1;
-				}
-			});
-			console.log(slideNowCourses);
-		// for (var j=0; j < slideNowCourses; j++) {
-		// 	if (slideNowCourses==0) {
-		// 		$("<li class='courses-nav-btn'></li>").addClass('active');
-		// 	}
-		// }
-	});
-		var multiccoutnCourses = 100 * slideCountCourses;
-		var dividecoutnCourses = 100 / slideCountCourses;
-		console.log(multiccoutnCourses);
-		console.log(dividecoutnCourses);
-		$('.courses-slidewrapper').css('width', multiccoutnCourses + '%');
-		$('.courses-slide').css('width', dividecoutnCourses + '%');
+	// 			if (navBtnIdCourses + 1 != slideNowCourses) {
+	// 				translateWidthCourses = -$('.courses-viewport').width() * (navBtnIdCourses);
+	// 				$('.courses-slidewrapper').css({
+	// 					'transform': 'translate(' + translateWidthCourses + 'px, 0)',
+	// 					'-webkit-transform': 'translate(' + translateWidthCourses + 'px, 0)',
+	// 					'-ms-transform': 'translate(' + translateWidthCourses + 'px, 0)',
+	// 				});
+	// 				slideNowCourses = navBtnIdCourses + 1;
+	// 			}
+	// 		});
+	// 		console.log(slideNowCourses);
+	// 	// for (var j=0; j < slideNowCourses; j++) {
+	// 	// 	if (slideNowCourses==0) {
+	// 	// 		$("<li class='courses-nav-btn'></li>").addClass('active');
+	// 	// 	}
+	// 	// }
+	// });
+	// 	var multiccoutnCourses = 100 * slideCountCourses;
+	// 	var dividecoutnCourses = 100 / slideCountCourses;
+	// 	console.log(multiccoutnCourses);
+	// 	console.log(dividecoutnCourses);
+	// 	$('.courses-slidewrapper').css('width', multiccoutnCourses + '%');
+	// 	$('.courses-slide').css('width', dividecoutnCourses + '%');
 
-		
-		jQuery(function($){
-			$('#true_loadmore').click(function(){
+
+	jQuery(function($){
+		$('#true_loadmore').click(function(){
 				$(this).text('Loading...'); // изменяем текст кнопки, вы также можете добавить прелоадер
 				var data = {
 					'action': 'loadmore',
@@ -86,7 +92,31 @@ export default {
 				});
 				return false;
 			});
+	});
+
+
+
+
+
+
+
+		// $('.cours-slider').slick({
+		// 	dots: true,
+		// 	infinite: true,
+		// 	speed: 300,
+		// 	slidesToShow: 1,
+		// });
+
+
+
+		$('.courses-slider').slick({
+			dots: true,
+			infinite: true,
+			slidesToShow: 1,
 		});
+
+
+
 
 
 		$('.teachers-block').slick({
