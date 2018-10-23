@@ -14,9 +14,8 @@ if (post_password_required()) {
     </h2>
 
     <div class="comment-list">
-      {{-- {!! wp_list_comments(['style' => 'ol', 'short_ping' => true]) !!} --}}
-      {{ wp_list_comments('type=comment&callback=mytheme_comment') }}
-      {{-- {{ wp_list_comments('type=comment&callback=mytheme_comment') }} --}}
+     {{-- {!! wp_list_comments(['style' => 'ol', 'short_ping' => true]) !!} --}}
+     {{ wp_list_comments('type=comment&callback=mytheme_comment') }}
     </div>
 
     @if (get_comment_pages_count() > 1 && get_option('page_comments'))

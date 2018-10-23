@@ -8,7 +8,11 @@
 @include('partials.head')
 <body @php body_class() @endphp>
   @php do_action('get_header') @endphp
-
+   <div class="preloader">
+    <div class="laoder-frame">
+      <img class="svg-loader" src="@asset('images/loader.svg')" alt="circle-loader">
+    </div>
+  </div>
   @if($header_page == 'page-header')
     @include('partials.header')
     @include('partials.header-slider')

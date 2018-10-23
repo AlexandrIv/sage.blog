@@ -14,10 +14,9 @@ if (post_password_required()) {
     </h2>
 
     <div class="comment-list">
-      
-      <?php echo e(wp_list_comments('type=comment&callback=mytheme_comment')); ?>
+     
+     <?php echo e(wp_list_comments('type=comment&callback=mytheme_comment')); ?>
 
-      
     </div>
 
     <?php if(get_comment_pages_count() > 1 && get_option('page_comments')): ?>

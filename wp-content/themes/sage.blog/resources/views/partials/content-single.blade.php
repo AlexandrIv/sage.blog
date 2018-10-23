@@ -19,56 +19,55 @@
     <div class="col-md-9">
       <div class="breadcrumbs">
        {!! the_breadcrumb() !!}
+     </div>
+     <div class="post-single-page">
+      <article>
+        <h2>{{ get_the_title() }}</h2>
+        <div class="meta">
+          <ul>
+            <li>{{ get_the_date() }}</li>
+            <li><a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}">{{ get_the_author() }}</a></li>
+            <li>{{ comments_number() }}</li>
+            <li>Posted in <span>{!! the_category('ID') !!}</span></li>
+          </ul>
+        </div>
+        <div class="thumbnail">
+          {!! get_the_post_thumbnail(); !!}
+        </div>
+        <div class="content">
+          {{ the_content() }}
+        </div>
+      </article>
+      <div class="tag">
+        {!! wp_tag_cloud() !!}
       </div>
-      <div class="post-single-page">
-        <article>
-          <h2>{{ get_the_title() }}</h2>
-          <div class="meta">
-            <ul>
-              <li>{{ get_the_date() }}</li>
-              <li><a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}">{{ get_the_author() }}</a></li>
-              <li>{{ comments_number() }}</li>
-              <li>Posted in <span>{!! the_category('ID') !!}</span></li>
-            </ul>
-          </div>
-          <div class="thumbnail">
-            {!! get_the_post_thumbnail(); !!}
-          </div>
-          <div class="content">
-            {{ the_content() }}
-          </div>
-        </article>
-        <div class="tag">
-          {!! wp_tag_cloud() !!}
-        </div>
-        <div class="share">
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
-        </div>
-        <div class="comment-block">
-          @php comments_template('/partials/comments.blade.php') @endphp
-        </div>
+      <div class="share">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+      </div>
+      <div class="comment-block">
+      @php comments_template('/partials/comments.blade.php') @endphp
+     </div>
 
-        
-       <div class="prev-next-button">
-          <div class="prev-btn">
-            {{ $next = previous_post_link('<i class="fas fa-angle-left"></i> %link') }}
-          </div>
-          <div class="next-btn">
-            {{ $next = next_post_link('%link <i class="fas fa-angle-right"></i>') }}
-          </div>
-        </div>
-
-
-
+     <div class="prev-next-button">
+      <div class="prev-btn">
+        {{ $next = previous_post_link('<i class="fas fa-angle-left"></i> %link') }}
+      </div>
+      <div class="next-btn">
+        {{ $next = next_post_link('%link <i class="fas fa-angle-right"></i>') }}
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="sidebar-single">
-        @include('partials/sidebar-single')
-      </div>
-    </div>
+
+
+
   </div>
+</div>
+<div class="col-md-3">
+  <div class="sidebar-single">
+    @include('partials/sidebar-single')
+  </div>
+</div>
+</div>
 </div>
 </div>
 

@@ -3,7 +3,7 @@
 		<div class="top-footer-shop">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="meta">
 							<h3><a href="#">Meta</a></h3>
 							<ul>
@@ -14,7 +14,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="archive">
 							<h3><a href="#">Archives</a></h3>
 							<ul>
@@ -22,7 +22,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="recent-posts">
 							<h3><a href="#">Recent posts</a></h3>
 							<ul>
@@ -33,7 +33,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="social">
 							<img src="<?= App\asset_path('images/social-footer-btn.png'); ?>" alt="">
 						</div>

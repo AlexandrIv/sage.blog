@@ -36,10 +36,7 @@
 						{!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
 						@endif
 						<div class="search">
-							<form role="search" method="get" action="{!! home_url( '/' ) !!}">
-								<input id="searchform" type="text" class="search-input" placeholder="search" value="<?php echo get_search_query() ?>" name="s" id="s">
-								<input type="submit" id="searchsubmit" class="search-button" value="">
-							</form>
+							@include('partials.search-form')
 						</div>
 					</div>
 				</div>

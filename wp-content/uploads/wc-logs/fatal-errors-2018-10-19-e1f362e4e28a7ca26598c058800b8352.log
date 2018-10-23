@@ -1,0 +1,353 @@
+2018-10-19T08:50:43+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:76
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/uploads/cache/faab90f9944ab9fab5a65546df5ec2aaedb2ae
+
+2018-10-19T08:52:04+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'elseif' (T_ELSEIF), expecting end of file in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:56
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/uploads/cache/faab90f9944ab9fab5a65546df5ec2aaedb2aece.php(6): Illuminate\View\View->r
+
+2018-10-19T08:52:17+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'elseif' (T_ELSEIF), expecting end of file in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:56
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/uploads/cache/faab90f9944ab9fab5a65546df5ec2aaedb2aece.php(6): Illuminate\View\View->r
+
+2018-10-19T08:52:40+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'elseif' (T_ELSEIF), expecting end of file in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:56
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/uploads/cache/faab90f9944ab9fab5a65546df5ec2aaedb2aece.php(6): Illuminate\View\View->r
+
+2018-10-19T09:00:00+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function is_product_page() in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:57
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#5 /var/www/sage.blog/public_htm
+
+2018-10-19T09:00:01+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function is_product_page() in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:57
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#5 /var/www/sage.blog/public_htm
+
+2018-10-19T09:00:02+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function is_product_page() in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:57
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#5 /var/www/sage.blog/public_htm
+
+2018-10-19T09:00:25+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function is_product_page() in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:59
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#5 /var/www/sage.blog/public_htm
+
+2018-10-19T09:00:40+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function is_product_page() in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:57
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#5 /var/www/sage.blog/public_htm
+
+2018-10-19T09:01:41+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function is_product_page() in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:61
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#5 /var/www/sage.blog/public_htm
+
+2018-10-19T09:01:43+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function is_product_page() in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:61
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#5 /var/www/sage.blog/public_htm
+
+2018-10-19T09:09:49+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function is_cart_page() in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:64
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#5 /var/www/sage.blog/public_html/w
+
+2018-10-19T09:09:50+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function is_cart_page() in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:64
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#5 /var/www/sage.blog/public_html/w
+
+2018-10-19T09:29:27+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '$log_out' (T_VARIABLE) in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:55
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/uploads/cache/faab90f9944ab9fab5a65546df5ec2aaedb2aece.php(6): Illuminate\View\View->render()
+#5 /var/www
+
+2018-10-19T09:29:28+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '$log_out' (T_VARIABLE) in /var/www/sage.blog/public_html/wp-content/uploads/cache/ae040fb091d56425ef6dba6d11d66a8a66e35b4f.php:55
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/uploads/cache/faab90f9944ab9fab5a65546df5ec2aaedb2aece.php(6): Illuminate\View\View->render()
+#5 /var/www
+
+2018-10-19T10:29:31+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.page-header] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.page-h...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.page-h...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0ecdf551693bc66478e8ec26e04c8a0d8f6c29c4.php(2): Illuminate\View\Factory->make('partials.page-h...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/s
+
+2018-10-19T10:29:31+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.page-header] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.page-h...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.page-h...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0ecdf551693bc66478e8ec26e04c8a0d8f6c29c4.php(2): Illuminate\View\Factory->make('partials.page-h...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/s
+
+2018-10-19T10:29:31+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.page-header] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.page-h...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.page-h...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0ecdf551693bc66478e8ec26e04c8a0d8f6c29c4.php(2): Illuminate\View\Factory->make('partials.page-h...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/s
+
+2018-10-19T10:29:31+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.page-header] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.page-h...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.page-h...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0ecdf551693bc66478e8ec26e04c8a0d8f6c29c4.php(2): Illuminate\View\Factory->make('partials.page-h...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/s
+
+2018-10-19T10:29:31+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.page-header] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.page-h...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.page-h...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0ecdf551693bc66478e8ec26e04c8a0d8f6c29c4.php(2): Illuminate\View\Factory->make('partials.page-h...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/s
+
+2018-10-19T11:17:54+00:00 CRITICAL Uncaught InvalidArgumentException: View [...partials.checkout-part.blade.php] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('...partials.che...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('...partials.che...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(20): Illuminate\View\Factory->make('...partials.che...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluate
+
+2018-10-19T11:17:55+00:00 CRITICAL Uncaught InvalidArgumentException: View [...partials.checkout-part.blade.php] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('...partials.che...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('...partials.che...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(20): Illuminate\View\Factory->make('...partials.che...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluate
+
+2018-10-19T11:18:06+00:00 CRITICAL Uncaught InvalidArgumentException: View [...partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('...partials.che...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('...partials.che...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(20): Illuminate\View\Factory->make('...partials.che...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var
+
+2018-10-19T11:18:07+00:00 CRITICAL Uncaught InvalidArgumentException: View [...partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('...partials.che...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('...partials.che...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(20): Illuminate\View\Factory->make('...partials.che...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var
+
+2018-10-19T11:18:13+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.checko...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.checko...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(20): Illuminate\View\Factory->make('partials.checko...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/ww
+
+2018-10-19T11:18:14+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.checko...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.checko...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(20): Illuminate\View\Factory->make('partials.checko...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/ww
+
+2018-10-19T11:20:05+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.checko...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.checko...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(20): Illuminate\View\Factory->make('partials.checko...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/ww
+
+2018-10-19T11:20:06+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.checko...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.checko...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(20): Illuminate\View\Factory->make('partials.checko...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/ww
+
+2018-10-19T11:20:57+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.checko...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.checko...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(23): Illuminate\View\Factory->make('partials.checko...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/ww
+
+2018-10-19T11:20:58+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.checko...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.checko...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(23): Illuminate\View\Factory->make('partials.checko...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/ww
+
+2018-10-19T11:20:59+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.checko...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.checko...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(23): Illuminate\View\Factory->make('partials.checko...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/ww
+
+2018-10-19T11:21:22+00:00 CRITICAL Uncaught InvalidArgumentException: View [...partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('...partials.che...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('...partials.che...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(23): Illuminate\View\Factory->make('...partials.che...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var
+
+2018-10-19T11:21:23+00:00 CRITICAL Uncaught InvalidArgumentException: View [...partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('...partials.che...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('...partials.che...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(23): Illuminate\View\Factory->make('...partials.che...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var
+
+2018-10-19T11:21:32+00:00 CRITICAL Uncaught InvalidArgumentException: View [...partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('...partials.che...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('...partials.che...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(23): Illuminate\View\Factory->make('...partials.che...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var
+
+2018-10-19T11:21:35+00:00 CRITICAL Uncaught InvalidArgumentException: View [...partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('...partials.che...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('...partials.che...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(23): Illuminate\View\Factory->make('...partials.che...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var
+
+2018-10-19T11:21:49+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.checkout-part] not found. in /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.checko...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.checko...')
+#2 /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php(23): Illuminate\View\Factory->make('partials.checko...', Array)
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/var/www/sage.b...')
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/ww
+
+2018-10-19T11:33:20+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'echo' (T_ECHO) in /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php:27
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/roots/sage-lib/Template/Blade.php(58): Illuminate\View\View->render()
+#5 /var/www/sage.bl
+
+2018-10-19T11:33:42+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'return' (T_RETURN) in /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php:29
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/roots/sage-lib/Template/Blade.php(58): Illuminate\View\View->render()
+#5 /var/www/sag
+
+2018-10-19T11:33:43+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'return' (T_RETURN) in /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php:29
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/roots/sage-lib/Template/Blade.php(58): Illuminate\View\View->render()
+#5 /var/www/sag
+
+2018-10-19T11:34:00+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'return' (T_RETURN) in /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php:29
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/roots/sage-lib/Template/Blade.php(58): Illuminate\View\View->render()
+#5 /var/www/sag
+
+2018-10-19T11:34:01+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'return' (T_RETURN) in /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php:29
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/roots/sage-lib/Template/Blade.php(58): Illuminate\View\View->render()
+#5 /var/www/sag
+
+2018-10-19T11:34:01+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'return' (T_RETURN) in /var/www/sage.blog/public_html/wp-content/uploads/cache/0c190e554d3029f34f7513f4379946e9c4648cc8.php:29
+Stack trace:
+#0 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/var/www/sage.b...', Array)
+#1 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/var/www/sage.b...', Array)
+#2 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /var/www/sage.blog/public_html/wp-content/themes/sage.blog/vendor/roots/sage-lib/Template/Blade.php(58): Illuminate\View\View->render()
+#5 /var/www/sag
+

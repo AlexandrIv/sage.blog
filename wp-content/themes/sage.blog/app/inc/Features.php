@@ -49,6 +49,7 @@ function Features() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'menu_icon' => 'dashicons-star-filled',
 	);
 	register_post_type( 'Features', $args );
 

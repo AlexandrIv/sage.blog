@@ -60,6 +60,9 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage')
     ]);
+    register_nav_menus([
+        'shop_menu' => __('Shop Menu', 'sage')
+    ]);
 
     /**
      * Enable post thumbnails
@@ -112,6 +115,10 @@ add_action('widgets_init', function () {
         'name'          => __('Archive', 'sage'),
         'id'            => 'sidebar-archive'
     ] + $config);
+    register_sidebar([
+        'name'          => __('Shop', 'sage'),
+        'id'            => 'sidebar-shop'
+    ] + $config);
 });
 
 /**
@@ -152,3 +159,5 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+add_theme_support('woocommerce');

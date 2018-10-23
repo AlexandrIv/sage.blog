@@ -103,7 +103,7 @@ Container::getInstance()
 
 if( function_exists('acf_add_options_page') ) {
 
-   acf_add_options_page(array(
+ acf_add_options_page(array(
     'page_title'    => 'Theme General Settings',
     'menu_title'    => 'Theme Settings',
     'menu_slug'     => 'theme-general-settings',
@@ -111,7 +111,7 @@ if( function_exists('acf_add_options_page') ) {
     'redirect'      => false
 ));
 
-   acf_add_options_page(array(
+ acf_add_options_page(array(
     'page_title'    => 'Theme General Settings',
     'menu_title'    => 'Theme Settings',
     'menu_slug'     => 'theme-general-settings',
@@ -119,13 +119,13 @@ if( function_exists('acf_add_options_page') ) {
     'redirect'      => false
 ));
 
-   acf_add_options_sub_page(array(
+ acf_add_options_sub_page(array(
     'page_title'    => 'Theme Header Settings',
     'menu_title'    => 'Header',
     'parent_slug'   => 'theme-general-settings',
 ));
 
-   acf_add_options_sub_page(array(
+ acf_add_options_sub_page(array(
     'page_title'    => 'Theme Footer Settings',
     'menu_title'    => 'Footer',
     'parent_slug'   => 'theme-general-settings',
@@ -189,9 +189,9 @@ function subscribes(){
     $myemail = $_POST['email'];
 
     if( email_exists($myemail) ){
-     echo 'error'; 
- }
- else{
+       echo 'error'; 
+   }
+   else{
     echo 'succes';
 }
 
@@ -244,29 +244,11 @@ show_admin_bar(false);
 
 
 
-// function the_breadcrumb() {
-//     if (!is_home()) {
-//         echo '<a class="home" href="';
-//         echo get_option('home');
-//         echo '">';
-//         bloginfo('name');
-//         echo "</a> <span class='ampers'>></span> <span>ARCHIVE BY</span> ";
-//         if (is_category() || is_single()) {
-//             the_category('title_li=');
-//             if (is_single()) {
-//                 echo " Â» ";
-//                 the_title();
-//             }
-//         } elseif (is_page()) {
-//             echo the_title();
-//         }
-//         if()
-//     }
-// }
+
 
 function the_breadcrumb() {
 
-$sep = ' <span class="sep"> > </span> ';
+    $sep = ' <span class="sep"> > </span> ';
 
     if (!is_front_page()) {
 
@@ -314,6 +296,12 @@ $sep = ' <span class="sep"> > </span> ';
 
 
 
+// DISABLE WORDPRESS COMMENTS JS
+
+function itsg_disable_comment_js(){
+   wp_deregister_script( 'comment-reply' );
+}
+add_action( 'init', 'itsg_disable_comment_js' );
 
 
 
@@ -350,41 +338,230 @@ function mytheme_comment( $comment, $args, $depth ) {
     <div class="comment-info">
 
         <div class="comment-author vcard">
-             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/incon-user.png" alt="">
+         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/incon-user.png" alt="">
 
+         <?php
+         printf(
+            __( '<cite class="fn">%s</cite> <span class="says"> &#8226 </span>' ),
+            get_comment_author_link()
+        );
+        ?>
+        <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
             <?php
             printf(
-                __( '<cite class="fn">%s</cite> <span class="says"> &#8226 </span>' ),
-                get_comment_author_link()
-            );
-            ?>
-            <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
-                <?php
-                printf(
-                    __( '%1$s' ),
-                    get_comment_date()
-                ); ?>
-            </a>
-            <?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
-        </div>
-        <?php if ( $comment->comment_approved == '0' ) { ?>
-            <em class="comment-awaiting-moderation">
-                <?php _e( 'Your comment is awaiting moderation.' ); ?>
-            </em><br/>
-        <?php } ?>
-        <div class="comment-text">
-            <?php comment_text(); ?>
-        </div>
-        
-        <div class="reply">
-            <?php 
-                comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'])))
-             ?>
+                __( '%1$s' ),
+                get_comment_date()
+            ); ?>
+        </a>
+        <?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+    </div>
+    <?php if ( $comment->comment_approved == '0' ) { ?>
+        <em class="comment-awaiting-moderation">
+            <?php _e( 'Your comment is awaiting moderation.' ); ?>
+        </em><br/>
+    <?php } ?>
+    <div class="comment-text">
+        <?php comment_text(); ?>
+    </div>
 
-        </div>
+    <div class="reply">
+        <a href="#respond" data="<?php echo $comment->comment_ID ?>">Reply</a>
     </div>
-    <?php if ( 'div' != $args['style'] ) { ?>
-    </div>
+</div>
+<?php if ( 'div' != $args['style'] ) { ?>
+</div>
 <?php }
 }
 
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+   ob_start();
+   ?>
+   <a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'Cart' ); ?>"><i class="fa fa-shopping-cart"></i> 
+    <span class="count"><?php echo WC()->cart->cart_contents_count ?></span>
+    <span class="item">item</span>
+    <span class="total_price"><?php echo WC()->cart->get_cart_total(); ?></span>
+</a>
+<?php
+$fragments['a.cart-contents'] = ob_get_clean();
+return $fragments;
+}
+
+
+
+add_action('wp_ajax_woocommerce_ajax_add_to_cart', 'woocommerce_ajax_add_to_cart');
+add_action('wp_ajax_nopriv_woocommerce_ajax_add_to_cart', 'woocommerce_ajax_add_to_cart');
+function woocommerce_ajax_add_to_cart() {
+
+    $product_id = apply_filters('woocommerce_add_to_cart_product_id', absint($_POST['product_id']));
+    $quantity = empty($_POST['quantity']) ? 1 : wc_stock_amount($_POST['quantity']);
+    $variation_id = absint($_POST['variation_id']);
+    $passed_validation = apply_filters('woocommerce_add_to_cart_validation', true, $product_id, $quantity);
+    $product_status = get_post_status($product_id);
+
+    if ($passed_validation && WC()->cart->add_to_cart($product_id, $quantity, $variation_id) && 'publish' === $product_status) {
+
+        do_action('woocommerce_ajax_added_to_cart', $product_id);
+
+        if ('yes' === get_option('woocommerce_cart_redirect_after_add')) {
+            wc_add_to_cart_message(array($product_id => $quantity), true);
+        }
+
+        WC_AJAX :: get_refreshed_fragments();
+    } else {
+
+        $data = array(
+            'error' => true,
+            'product_url' => apply_filters('woocommerce_cart_redirect_after_error', get_permalink($product_id), $product_id));
+
+        echo wp_send_json($data);
+    }
+
+    wp_die();
+}
+
+
+function categories_postcount_filter ($variable) {
+   $variable = str_replace('(', '', $variable);
+   $variable = str_replace(')', '', $variable);
+   return $variable;
+}
+add_filter('wp_list_categories','categories_postcount_filter');
+
+
+add_action( 'woocommerce_share', 'bbloomer_custom_action', 5 );
+function bbloomer_custom_action() {
+    $crunchifyURL = urlencode(get_permalink());
+    $facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$crunchifyURL;
+    $pinterestURL = 'https://pinterest.com/pin/create/button/?url=&media=&description='.$crunchifyURL;
+    $twitterURL = 'https://twitter.com/home?status='.$crunchifyURL;
+    ?>
+    <div class="share-button-product">
+        <a class="crunchify-link crunchify-facebook" href="<?php echo $facebookURL; ?>" target="_blank">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fb-share.png" alt="">
+            <p>share<br>on facebook</p>
+        </a> 
+        <a class="crunchify-link crunchify-pinterest" href="<?php echo $pinterestURL; ?>" target="_blank">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/pinterest-share.png" alt="">
+            <p>pin<br>this product</p>
+        </a>
+        <a class="crunchify-link crunchify-twitter" href="<?php echo $twitterURL; ?>" target="_blank">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-share.png" alt="">
+            <p>tweet<br>this product</p>
+        </a>
+    </div>
+    <?php
+}
+add_filter("wp_head", "wpds_increament_post_view");
+function get_post_views($post_id=NULL){
+    global $post;
+    if($post_id==NULL)
+        $post_id = $post->ID;
+    if(!empty($post_id)){
+        $views_key = 'wpds_post_views';
+        $views = get_post_meta($post_id, $views_key, true);
+        if(empty($views) || !is_numeric($views)){
+            delete_post_meta($post_id, $views_key);
+            add_post_meta($post_id, $views_key, '0');
+            return "0 preview";
+        }
+        else if($views == 1)
+            return "1 preview";
+        return $views.' preview';
+    }
+}
+function wpds_increament_post_view() {
+    global $post;
+    
+    if(is_singular()){
+        $views_key = 'wpds_post_views';
+        $views = get_post_meta($post->ID, $views_key, true);
+        if(empty($views) || !is_numeric($views)){
+            delete_post_meta($post->ID, $views_key);
+            add_post_meta($post->ID, $views_key, '1');
+        }else
+        update_post_meta($post->ID, $views_key, ++$views);
+    }
+}
+
+
+
+add_filter( 'woocommerce_single_product_summary', 'meta_product', 5 );
+
+function meta_product() {
+    ?>
+    <div class="meta-single-product">
+        <ul>
+            <li>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/heart-blue.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/heart-blue.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/heart-blue.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/heart-blue.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/heart-gray.png" alt="">
+            </li>
+            <li><?php echo get_post_views(get_the_ID()); ?></li>
+            <li>write a review</li>
+        </ul>
+    </div>
+    <?php
+}
+
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+
+add_action( 'after_setup_theme', 'yourtheme_setup' );
+ 
+function yourtheme_setup() {
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+}
+
+
+// Наименование выше миниатюры (на cтранице вывода товаров категории)
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 5 );
+// add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_price', 10 );
+
+
+
+
+
+// // removes Order Notes Title - Additional Information
+// add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+
+// //remove Order Notes Field
+// add_filter( 'woocommerce_checkout_fields' , 'remove_order_notes' );
+
+// function remove_order_notes( $fields ) {
+//      unset($fields['order']['order_comments']);
+//      return $fields;
+// }
+
+
+
+
+
+add_action( 'woocommerce_cart_is_empty ', 'woocommerce_cart_is_empty_message');
+
+function woocommerce_cart_is_empty_message() {
+    ?>
+    <p class="cart-empty">
+        <?php _e( 'Your cart is currently empty.2', 'woocommerce' ) ?>
+    </p>
+    <?php
+}
+
+
+add_action( 'woocommerce_before_single_product_summary', 'bbloomer_custom_action22', 5 );
+
+function bbloomer_custom_action22() {
+   echo woocommerce_breadcrumb();
+}
+
+
+
+function is_blog () {
+    return (is_page() || is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag()) &&  get_post_type();
+}

@@ -37,10 +37,7 @@
 
 						<?php endif; ?>
 						<div class="search">
-							<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
-								<input id="searchform" type="text" class="search-input" placeholder="search" value="<?php echo get_search_query() ?>" name="s" id="s">
-								<input type="submit" id="searchsubmit" class="search-button" value="">
-							</form>
+							<?php echo $__env->make('partials.search-form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 						</div>
 					</div>
 				</div>

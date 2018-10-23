@@ -1,4 +1,4 @@
 @extends('layouts.blog')
 @section('content')
-  @include('partials.archive-page')
+@include('partials.archive-page')
 @endsection

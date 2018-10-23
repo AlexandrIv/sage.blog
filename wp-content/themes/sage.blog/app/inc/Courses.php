@@ -49,6 +49,7 @@ function Courses() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'menu_icon'   => 'dashicons-screenoptions',
 	);
 	register_post_type( 'Courses', $args );
 

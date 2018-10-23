@@ -94,6 +94,12 @@
 				}
 			}
 		}
+		@media only screen and (max-width : 768px) {
+			text-align: center;
+			.meta, .archive, .recent-posts, .social {
+				margin-bottom: 30px;
+			}
+		}
 	}
 	.bottom-footer-shop {
 		width: 100%;
@@ -103,7 +109,7 @@
 		align-items: center;
 		justify-content: center;
 		p {
-			color: #23a0bf;
+			color: #999999;
 			font-family: Montserrat;
 			font-size: 13px;
 			font-weight: 400;
@@ -112,7 +118,7 @@
 			margin: 0;
 			padding: 0;
 			span {
-				color: #999999;
+				color: #23a0bf;
 			}
 		}
 	}

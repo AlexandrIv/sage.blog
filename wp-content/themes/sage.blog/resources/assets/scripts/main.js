@@ -10,6 +10,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import slick from 'slick-carousel';
 import googlemaps from './libs/google-maps';
+import pjax from 'jquery-pjax';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -21,6 +22,7 @@ const routes = new Router({
   aboutUs,
   slick,
   googlemaps,
+  pjax,
 });
 
 // Load Events

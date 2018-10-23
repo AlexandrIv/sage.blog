@@ -2,6 +2,7 @@
 <html {{ get_language_attributes() }}>
 @include('partials.head')
 <body @php body_class() @endphp>
+  <div class="body-bcg"></div>
   @php do_action('get_header') @endphp
   @include('partials.shop-header')
   <div class="wrap" role="document">
